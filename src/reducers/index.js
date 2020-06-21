@@ -11,7 +11,13 @@ const testreducer=(state=initialstate,action)=>{
 }
 
 //**************************kHALED *****************************************************/
-
+const getProductreducer=(state=initialstate,action)=>{
+  
+    if(action.type==="get-product"){
+    return action.payload
+    }
+    else return state
+}
 
 
 
@@ -54,4 +60,5 @@ const testreducer=(state=initialstate,action)=>{
 //**************************COMBINE REDUCER *****************************************************/
 export default combineReducers({
     testin:testreducer,
+    getProductState:getProductreducer,
   });

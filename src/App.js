@@ -7,6 +7,7 @@ import { Component } from "react";
 import { testaction } from "./actions";
 import Navbar from "./Components/communComponets/Navbar";
 import Sidebar from "./Components/communComponets/Sidebar";
+import DashboardManagement from "./Components/DashboardProduct/DashboardProduct";
 
 class App extends Component {
   componentDidMount() {
@@ -14,26 +15,13 @@ class App extends Component {
   }
 
   render() {
-    const contenu = <div>
-      <h1>hello</h1>;
-    {
-      this.props.testin
-    }
-
-    <div class="ui segment">
-      <div class="ui active transition visible inverted dimmer">
-        <div class="content">
-          <div class="ui inverted text loader">Loading</div>
-        </div>
-      </div>
-     
-    </div>
-    </div>;
+   
 
     return (
       <div className="App">
         <Navbar />
-        <Sidebar contenu={contenu} />
+        <Sidebar  />
+       
       </div>
     );
   }

@@ -1,32 +1,48 @@
-import React, { Component } from 'react';
-import "./Sidebar.css"
-class Sidebar extends Component {
-    render() {
-        return (
-            <div class="ui segment pushable">
-  <div class="ui inverted vertical labeled icon ui overlay left thin visible sidebar menu">
-    <a class="item">
-      <i aria-hidden="true" class="home icon"></i>
-      Home
-    </a>
-    <a class="item">
-      <i aria-hidden="true" class="gamepad icon"></i>
-      Games
-    </a>
-    <a class="item">
-      <i aria-hidden="true" class="camera icon"></i>
-      Channels
-    </a>
-  </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <h3 class="ui header">{this.props.contenu}</h3>
-      <img src="/images/wireframe/paragraph.png" class="ui image" />
-    </div>
-  </div>
-</div>
-        );
-    }
-}
+import React from 'react'
+import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-export default Sidebar;
+import {  Route, Switch, Link } from 'react-router-dom';
+import DashboardProduct from '../DashboardProduct/DashboardProduct';
+import DashboardProductTable from '../DashboardProduct/DashboardProductTable';
+
+import "./Sidebar.css"
+import Test from '../DashboardProduct/Test';
+const SidebarExampleVisible = () => (
+  <Sidebar.Pushable as={Segment}>
+    <Sidebar
+      as={Menu}
+      animation='overlay'
+      icon='labeled'
+      inverted
+      vertical
+      visible
+      width='thin'
+    >
+        
+      <Menu.Item as={Link} to="/Product" >
+        <Icon name='home' />
+        Home
+      </Menu.Item>
+      <Menu.Item as={Link} to="/test">
+        <Icon name='gamepad' />
+        Games
+      </Menu.Item>
+      <Menu.Item as='a'>
+        <Icon name='camera' />
+        Channels
+      </Menu.Item>
+    </Sidebar>
+
+    <Sidebar.Pusher>
+      <Segment basic>
+          
+        <Switch>
+        <Route path='/Product' component={DashboardProduct} />
+        <Route path='/test' component={Test} />
+        </Switch>
+      </Segment>
+    </Sidebar.Pusher>
+  </Sidebar.Pushable>
+)
+
+export default SidebarExampleVisible

@@ -1,0 +1,94 @@
+{
+  "Product": [
+    {
+      "id": 1,
+      "reference": "5556",
+      "name": "sac 2",
+      "color": "green",
+      "quantity": 1,
+      "phase": "production",
+      "dimension": "150/60"
+    },
+    {
+      "id": 2,
+      "reference": "5557",
+      "name": "sac 2",
+      "color": "green",
+      "quantity": 1,
+      "phase": "production",
+      "dimension": "150/60"
+    },
+    {
+      "id": 3,
+      "reference": "5558",
+      "name": "sac 3",
+      "color": "green",
+      "quantity": 1,
+      "phase": "production",
+      "dimension": "150/60"
+    },
+    {
+      "id": 4,
+      "reference": "5559",
+      "name": "sac 4",
+      "color": "green",
+      "quantity": 1,
+      "phase": "production",
+      "dimension": "150/60"
+    },
+    {
+      "name": "iguguq",
+      "reference": "ihsgugis",
+      "color": "s,csugcsb",
+      "quantity": "csihcps",
+      "phase": "cighchozsjcn",
+      "dimension": "shcosjc",
+      "id": 5
+    },
+    {
+      "name": "sfsf",
+      "reference": "fsfsf",
+      "color": "sfsfsf",
+      "quantity": "sfsf",
+      "phase": "sfsfsfsfsf",
+      "dimension": "sfsfsfsfsf",
+      "id": 6
+    },
+    {
+      "name": "scsc",
+      "reference": "scsc",
+      "color": "scsc",
+      "quantity": "cscs",
+      "phase": "cscsc",
+      "dimension": "scscsc",
+      "id": 7
+    },
+    {
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "id": 9
+    },
+    {
+      "name": "ihgi",
+      "reference": "jfeoj",
+      "color": "oheoi",
+      "quantity": "oejgoaoe",
+      "phase": "odjfo",
+      "dimension": "ojgoejg",
+      "id": 10
+    }
+  ]
+}
