@@ -90,5 +90,71 @@
       "dimension": "ojgoejg",
       "id": 10
     }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "moderateur": "jon",
+      "date": "05/05/2020",
+      "action": "delete",
+      "reference": "477"
+    },
+    {
+      "id": 2,
+      "moderateur": "molopp",
+      "date": "05/05/2020",
+      "action": "edit",
+      "reference": "577"
+    },
+    {
+      "id": 3,
+      "moderateur": "kil",
+      "date": "05/05/2020",
+      "action": "add",
+      "reference": "477"
+    },
+    {
+      "id": 4,
+      "moderateur": "kil",
+      "date": "05/05/2020",
+      "action": "add",
+      "reference": "877"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "admin",
+      "lastName": "",
+      "email": "takoua@gmail.com",
+      "userName": "",
+      "post": "",
+      "password": "0000",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "t",
+      "password": "000",
+      "email": "t@gmail.com",
+      "role": "moderateur"
+    },
+    {
+      "firstName": "tako",
+      "lastName": "",
+      "email": "",
+      "userName": "",
+      "post": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "firstName": "khaled",
+      "lastName": "",
+      "email": "",
+      "userName": "",
+      "post": "",
+      "password": "",
+      "id": 4
+    }
   ]
 }
