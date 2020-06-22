@@ -7,11 +7,14 @@ import DashboardProductTable from '../DashboardProduct/DashboardProductTable';
 
 import "./Sidebar.css"
 import Test from '../DashboardProduct/Test';
-const SidebarExampleVisible = () => (
-  <Sidebar.Pushable as={Segment}>
+const SidebarExampleVisible = () => {
+  
+  return (
+  <Sidebar.Pushable as={Segment} >
     <Sidebar
+    className="ui container"
       as={Menu}
-      animation='overlay'
+      animation='push'
       icon='labeled'
       inverted
       vertical
@@ -33,7 +36,7 @@ const SidebarExampleVisible = () => (
       </Menu.Item>
     </Sidebar>
 
-    <Sidebar.Pusher>
+    <Sidebar.Pusher >
       <Segment basic>
           
         <Switch>
@@ -43,6 +46,8 @@ const SidebarExampleVisible = () => (
       </Segment>
     </Sidebar.Pusher>
   </Sidebar.Pushable>
+  
 )
+  }
 
 export default SidebarExampleVisible

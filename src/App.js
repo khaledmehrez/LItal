@@ -9,27 +9,22 @@ import Navbar from "./Components/communComponets/Navbar";
 import Sidebar from "./Components/communComponets/Sidebar";
 import DashboardManagement from "./Components/DashboardProduct/DashboardProduct";
 
-class App extends Component {
-  componentDidMount() {
-    this.props.testaction("ahlan react redux");
-  }
+const App = () => {
+  
 
-  render() {
+  
    
 
     return (
+      
       <div className="App">
         <Navbar />
         <Sidebar  />
        
       </div>
+      
     );
   }
-}
-const mapStateToProps = (state) => ({
-  testin: state.testin,
-});
-const mapDispatchToProps = (dispatch) => ({
-  testaction: (payload) => dispatch(testaction(payload)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+export default App;
