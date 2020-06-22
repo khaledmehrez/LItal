@@ -13,7 +13,11 @@
       "id": 2,
       "reference": "5557",
       "name": "sac 2",
+
       "color": "blue",
+
+      "color": "green",
+
       "quantity": 1,
       "phase": "production",
       "dimension": "150/60"
@@ -22,7 +26,11 @@
       "id": 3,
       "reference": "5558",
       "name": "sac 3",
+
       "color": "marron",
+
+      "color": "green",
+
       "quantity": 1,
       "phase": "production",
       "dimension": "150/60"
@@ -31,7 +39,11 @@
       "id": 4,
       "reference": "5559",
       "name": "sac 4",
+
       "color": "pink",
+
+      "color": "green",
+
       "quantity": 1,
       "phase": "production",
       "dimension": "150/60"

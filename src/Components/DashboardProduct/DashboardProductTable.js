@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
+
 
 
 
@@ -9,6 +11,7 @@ const DashboardProductTable =(props)=> {
     
     return (
       
+
       <Table.Body>
       <Table.Row>
         <Table.Cell  warning >
@@ -24,6 +27,20 @@ const DashboardProductTable =(props)=> {
       </Table.Row>
       
     </Table.Body>
+
+      <tbody class="">
+    <tr class="">
+      <td class=""><div class="ui ribbon label">{data.name}</div></td>
+      <td class="">{data.reference}</td>
+      <td class="">{data.color}</td>
+      <td class="">{data.quantity}</td>
+      <td class="">{data.phase}</td>
+      <td class="">{data.dimension}</td>
+      
+      
+    </tr>
+    </tbody>
+
   
     );
   }
