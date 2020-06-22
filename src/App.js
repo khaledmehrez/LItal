@@ -8,6 +8,7 @@ import { testaction } from "./actions";
 import Navbar from "./Components/communComponets/Navbar";
 import Sidebar from "./Components/communComponets/Sidebar";
 import DashboardManagement from "./Components/DashboardProduct/DashboardProduct";
+
 import SignIn from "./Components/users/signIn"
 class App extends Component {
   componentDidMount() {
@@ -17,19 +18,24 @@ class App extends Component {
   render() {
 
 
+
+const App = () => {
+  
+
+  
+   
+
+
     return (
+      
       <div className="App">
         <Navbar />
         <Sidebar />
         <SignIn />
       </div>
+      
     );
   }
-}
-const mapStateToProps = (state) => ({
-  testin: state.testin,
-});
-const mapDispatchToProps = (dispatch) => ({
-  testaction: (payload) => dispatch(testaction(payload)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+export default App;
