@@ -1,0 +1,16 @@
+.ui.celled.table{
+    width:80%;
+    
+    
+}
+input{
+    width:100px;
+}
+@media only screen and (max-width: 600px) {
+    .ui.celled.table{
+       width:1px;
+       margin-left: -20px;
+        
+    }
+    
+}
