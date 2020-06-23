@@ -1,32 +1,103 @@
-import React, { Component } from "react";
-import { Icon, Label, Menu, Table } from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { Icon, Label, Menu, Table, Modal } from 'semantic-ui-react'
+import { deleteProductFromApi, patchProductToApi } from "../../api/ApiProduct";
+
+
+const DashboardProductTable = (props) => {
+
+  const { data } = props;
+  const dispatch = useDispatch()
+  function deleteProduct(i) {
+
+    dispatch(deleteProductFromApi(i))
+
+  }
+
+  const [state, setState] = useState({ name: props.data.name, reference: props.data.reference, color: props.data.color, quantity: props.data.quantity, phase: props.data.phase, dimension: props.data.dimension, marque: props.data.marque, type: props.data.type, collection: props.data.collection, locallisation: props.data.locallisation, carton: props.data.carton });
+  function handleChange(event) {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+
+  }
 
 
 
-const DashboardProductTable =(props)=> {
-  
-    const {data}=props;
-    
-    return (
-      
-      <Table.Body>
+  function editProduct(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton) {
+
+    dispatch(patchProductToApi(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton))
+
+  }
+
+  return (
+
+    <Table.Body>
       <Table.Row>
-        <Table.Cell  warning >
-          <Label style={{color:props.colorname}} ribbon>{data.name}</Label>
+
+
+
+        <Table.Cell>  <button className='btn-trash' onClick={() => deleteProduct(data.id)}>d</button>
+
+          < Modal trigger={< button button className="btn-sign" > e</ button>} closeIcon >
+            <Modal.Content >
+
+              <input type="text" placeholder={props.data.name} name="name" onChange={handleChange} />
+              <input type="text" placeholder={props.data.reference} name="reference" onChange={handleChange} />
+              <input type="text" placeholder={props.data.color} name="color" onChange={handleChange} />
+              <input type="text" placeholder={props.data.quantity} name="quantity" onChange={handleChange} />
+              <input type="text" placeholder={props.data.phase} name="phase" onChange={handleChange} />
+              <input type="text" placeholder={props.data.dimension} name="dimension" onChange={handleChange} />
+              <input type="text" placeholder={props.data.marque} name="marque" onChange={handleChange} />
+              <input type="text" placeholder={props.data.type} name="type" onChange={handleChange} />
+              <input type="text" placeholder={props.data.collection} name="collection" onChange={handleChange} />
+              <input type="text" placeholder={props.data.locallisation} name="locallisation" onChange={handleChange} />
+              <input type="text" placeholder={props.data.carton} name="carton" onChange={handleChange} />
+              <button type="submit" onClick={() => editProduct(data.id, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton)
+              }>ok</button>
+
+
+            </Modal.Content>
+
+          </Modal >
+
+
+
+        </Table.Cell>
+
+
+
+
+
+
+        <Table.Cell warning >
+          <Label style={{ color: props.colorname }} ribbon>{data.name}</Label>
         </Table.Cell >
-        <Table.Cell style={{color:props.colorreference}}>{data.reference}</Table.Cell>
-        <Table.Cell style={{color:props.colorcolor}}>{data.color}</Table.Cell>
+        <Table.Cell style={{ color: props.colorreference }}>{data.reference}</Table.Cell>
+        <Table.Cell style={{ color: props.colorcolor }}>{data.color}</Table.Cell>
         <Table.Cell>
           {data.quantity}
         </Table.Cell>
         <Table.Cell>{data.phase}</Table.Cell>
         <Table.Cell>{data.dimension}</Table.Cell>
+
+        <Table.Cell>{data.marque}</Table.Cell>
+        <Table.Cell>{data.type}</Table.Cell>
+        <Table.Cell>{data.collection}</Table.Cell>
+        <Table.Cell>{data.locallisation}</Table.Cell>
+        <Table.Cell>{data.carton}</Table.Cell>
+
+
+
+
+
       </Table.Row>
-      
+
     </Table.Body>
-  
-    );
-  }
+
+  );
+}
 
 
 export default DashboardProductTable;

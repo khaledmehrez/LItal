@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUsersFromApi, patchUsersToApi } from '../../api/ApiUsers';
 import { Modal } from 'semantic-ui-react'
+
 const ArrayUsers = (props) => {
     const { dataUsers } = props
     const dispatch = useDispatch()
@@ -11,12 +12,12 @@ const ArrayUsers = (props) => {
 
     }
     const [state, setState] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        userName: '',
-        post: '',
-        password: ''
+        firstName: dataUsers.firstName,
+        lastName: dataUsers.lastName,
+        email: dataUsers.email,
+        userName: dataUsers.userName,
+        post: dataUsers.post,
+        password: dataUsers.password
 
     });
     const handleChange = event => {
@@ -49,38 +50,38 @@ const ArrayUsers = (props) => {
 
                             <div className="form-group">
 
-                                <input id='firstName' type="text" placeholder="firstName" onChange={handleChange} />
+                                <input id='firstName' type="text" placeholder={dataUsers.firstName} onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='lastName' type="text" placeholder="lastName" onChange={handleChange} />
+                                <input id='lastName' type="text" placeholder={dataUsers.lastName} onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='userName' type="text" placeholder="userName" onChange={handleChange} />
+                                <input id='userName' type="text" placeholder={dataUsers.userName} onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='email' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" placeholder="Enter email" onChange={handleChange} />
-                                <br />
-                            </div>
-                            <br />
-                            <div className="form-group">
-
-                                <input id='password' type="password" placeholder="Enter password" maxLength="6" onChange={handleChange} />
+                                <input id='email' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" placeholder={dataUsers.email} onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
 
-                                <input id='confirmationPassword' type="password" placeholder="Confirmer password" maxLength="6"
+                                <input id='password' type="password" placeholder={dataUsers.password} maxLength="6" onChange={handleChange} />
+                                <br />
+                            </div>
+                            <br />
+                            <div className="form-group">
+
+                                <input id='confirmationPassword' type="password" placeholder={dataUsers.post}maxLength="6"
                                 />
                             </div>
                             <br />
-                            <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers.id,state.firstName, state.lastName, state.email, state.userName, state.post, state.password)
+                            <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers.id, state.firstName, state.lastName, state.email, state.userName, state.post, state.password)
                             }>ok</button>
 
 
