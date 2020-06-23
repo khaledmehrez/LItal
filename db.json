@@ -7,7 +7,12 @@
       "color": "green",
       "quantity": 1,
       "phase": "production",
-      "dimension": "150/60"
+      "dimension": "150/60",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": ""
     },
     {
       "id": 2,
@@ -16,7 +21,12 @@
       "color": "blue",
       "quantity": 1,
       "phase": "production",
-      "dimension": "150/60"
+      "dimension": "150/60",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": ""
     },
     {
       "id": 3,
@@ -25,7 +35,12 @@
       "color": "marron",
       "quantity": 1,
       "phase": "production",
-      "dimension": "150/60"
+      "dimension": "150/60",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": ""
     },
     {
       "id": 4,
@@ -34,7 +49,12 @@
       "color": "pink",
       "quantity": 1,
       "phase": "production",
-      "dimension": "150/60"
+      "dimension": "150/60",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": ""
     },
     {
       "name": "iguguq",
@@ -55,12 +75,17 @@
       "id": 6
     },
     {
-      "name": "scsc",
-      "reference": "scsc",
-      "color": "scsc",
-      "quantity": "cscs",
-      "phase": "cscsc",
-      "dimension": "scscsc",
+      "name": "lmmmm",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
       "id": 7
     },
     {
@@ -70,24 +95,39 @@
       "quantity": null,
       "phase": "",
       "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
       "id": 8
     },
     {
-      "name": "",
+      "name": "t",
       "reference": "",
       "color": "",
       "quantity": null,
       "phase": "",
       "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
       "id": 9
     },
     {
-      "name": "ihgi",
-      "reference": "jfeoj",
-      "color": "oheoi",
-      "quantity": "oejgoaoe",
-      "phase": "odjfo",
-      "dimension": "ojgoejg",
+      "name": "lllll",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
       "id": 10
     }
   ],
@@ -148,7 +188,7 @@
       "id": 3
     },
     {
-      "firstName": "khaled",
+      "firstName": "oo",
       "lastName": "",
       "email": "",
       "userName": "",

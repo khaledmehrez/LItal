@@ -20,5 +20,51 @@ export function PostProductAPi(data) {
       quantity: data.quantity,
       phase: data.phase,
       dimension: data.dimension,
+      marque: data.marque,
+      type: data.type,
+      collection: data.collection,
+      locallisation: data.locallisation,
+      carton: data.carton,
     });
+}
+export function deleteProductFromApi(i) {
+  window.location.reload()
+  return () => {
+    axios.delete(`http://localhost:4000/Product/${i}`)
+  }
+
+}
+
+
+
+
+
+export function patchProductToApi(id, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton) {
+
+
+  return () => {
+    axios.patch(`http://localhost:4000/Product/${id}`, {
+
+
+      name:name,
+      reference:reference,
+      color:color,
+      quantity:quantity,
+      phase:phase,
+      dimension:dimension,
+      marque:marque,
+      type:type,
+      collection: collection,
+      locallisation:locallisation,
+      carton:carton,
+
+
+    }).then((res) =>
+      console.log(res.data),
+
+       window.location.reload()
+    );
+
+  }
+
 }
