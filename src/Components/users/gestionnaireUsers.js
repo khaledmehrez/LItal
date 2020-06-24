@@ -26,11 +26,13 @@ export default function GestionnaireUsers() {
                     <tr class="">
 
                         <th class="">firstName</th>
-                        <th class="">lastName</th>
-                        <th class="">email</th>
-                        <th class="">userName</th>
-                        <th class="">post</th>
-                        <th class="">password</th>
+                        <th class="">plus details</th>
+                        <th class="">configuration</th>
+                      
+
+
+
+
                         <th class=""> </th>
 
                     </tr>
@@ -50,9 +52,7 @@ export default function GestionnaireUsers() {
                                 <a class="item">2</a>
                                 <a class="item">3</a>
                                 <a class="item">4</a>
-                                <a class="item">5</a>
-                                <a class="item">6</a>
-                                <a class="item">7</a>
+
 
                                 <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
                             </div>

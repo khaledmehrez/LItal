@@ -38,23 +38,23 @@ const DashboardProductTable = (props) => {
 
 
 
-        <Table.Cell>  <button className='btn-trash' onClick={() => deleteProduct(data.id)}>d</button>
+        <Table.Cell>  <button name="suppression" className='btn-trash ui button' onClick={() => deleteProduct(data.id)}>d</button>
 
-          < Modal trigger={< button button className="btn-sign" > e</ button>} closeIcon >
+          < Modal trigger={< button button className="btn-sign ui button" > e</ button>} closeIcon >
             <Modal.Content >
 
-              <input type="text" placeholder={props.data.name} name="name" onChange={handleChange} />
-              <input type="text" placeholder={props.data.reference} name="reference" onChange={handleChange} />
-              <input type="text" placeholder={props.data.color} name="color" onChange={handleChange} />
-              <input type="text" placeholder={props.data.quantity} name="quantity" onChange={handleChange} />
-              <input type="text" placeholder={props.data.phase} name="phase" onChange={handleChange} />
-              <input type="text" placeholder={props.data.dimension} name="dimension" onChange={handleChange} />
-              <input type="text" placeholder={props.data.marque} name="marque" onChange={handleChange} />
-              <input type="text" placeholder={props.data.type} name="type" onChange={handleChange} />
-              <input type="text" placeholder={props.data.collection} name="collection" onChange={handleChange} />
-              <input type="text" placeholder={props.data.locallisation} name="locallisation" onChange={handleChange} />
-              <input type="text" placeholder={props.data.carton} name="carton" onChange={handleChange} />
-              <button type="submit" onClick={() => editProduct(data.id, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton)
+              <input type="text" value={state.name} name="name" onChange={handleChange} />
+              <input type="text" value={state.reference} name="reference" onChange={handleChange} />
+              <input type="text" value={state.color} name="color" onChange={handleChange} />
+              <input type="text" value={state.quantity} name="quantity" onChange={handleChange} />
+              <input type="text" value={state.phase} name="phase" onChange={handleChange} />
+              <input type="text" value={state.dimension} name="dimension" onChange={handleChange} />
+              <input type="text" value={state.marque} name="marque" onChange={handleChange} />
+              <input type="text" value={state.type} name="type" onChange={handleChange} />
+              <input type="text" value={state.collection} name="collection" onChange={handleChange} />
+              <input type="text" value={state.locallisation} name="locallisation" onChange={handleChange} />
+              <input type="text" value={state.carton} name="carton" onChange={handleChange} />
+              <button type="submit"  name="modification" onClick={() => editProduct(data.id, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton)
               }>ok</button>
 
 

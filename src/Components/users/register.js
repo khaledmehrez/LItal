@@ -42,7 +42,7 @@ function Register() {
 
 
     return (
-        < Modal trigger={< button button className="btn-sign" > ajout</ button>} closeIcon >
+        < Modal trigger={< button button className="btn-sign ui button" > ajout</ button>} closeIcon >
 
             <Modal.Content >
 

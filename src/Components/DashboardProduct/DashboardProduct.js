@@ -62,107 +62,109 @@ const DashboardProduct = () => {
 
       <Filter handlechangeDate={handlechangeDate} />
       {(state.filter != "default" && state.filter != "new") ? <div class="ui input"><input type="text" placeholder={state.filter} onChange={(event) => HandleSearch(event)} /></div> : null}
-      <br /> <button onClick={addProduct}>p</button>
-      <Table
-        celled
-        selectable
+      <br /> <button  name="ajout" className="btn-sign ui button" onClick={addProduct}>p</button>
+      <div className='lll'>
+        <Table
+          celled
+          selectable
+          unstackable
 
 
 
 
+        >
+          <Table.Header>
+            <Table.Row >
+              <Table.HeaderCell ></Table.HeaderCell>
+              <Table.HeaderCell >nom</Table.HeaderCell>
+              <Table.HeaderCell>reference</Table.HeaderCell>
+              <Table.HeaderCell>couleur</Table.HeaderCell>
+              <Table.HeaderCell>quantite</Table.HeaderCell>
+              <Table.HeaderCell>phase</Table.HeaderCell>
+              <Table.HeaderCell>mesures</Table.HeaderCell>
+              <Table.HeaderCell >marque</Table.HeaderCell>
+              <Table.HeaderCell >type</Table.HeaderCell>
+              {/* <Table.HeaderCell >prototype ou production</Table.HeaderCell> */}
+              <Table.HeaderCell >collection</Table.HeaderCell>
+              <Table.HeaderCell >locallisation</Table.HeaderCell>
+              <Table.HeaderCell >carton</Table.HeaderCell>
 
-      >
-        <Table.Header>
-          <Table.Row >
-            <Table.HeaderCell ></Table.HeaderCell>
-            <Table.HeaderCell >nom</Table.HeaderCell>
-            <Table.HeaderCell>reference</Table.HeaderCell>
-            <Table.HeaderCell>couleur</Table.HeaderCell>
-            <Table.HeaderCell>quantite</Table.HeaderCell>
-            <Table.HeaderCell>phase</Table.HeaderCell>
-            <Table.HeaderCell>mesures</Table.HeaderCell>
-            <Table.HeaderCell >marque</Table.HeaderCell>
-            <Table.HeaderCell >type</Table.HeaderCell>
-            {/* <Table.HeaderCell >prototype ou production</Table.HeaderCell> */}
-            <Table.HeaderCell >collection</Table.HeaderCell>
-            <Table.HeaderCell >locallisation</Table.HeaderCell>
-            <Table.HeaderCell >carton</Table.HeaderCell>
+            </Table.Row>
+            <Table.Row>
+              <Table.HeaderCell></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="nom..." name="name" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="reference..." name="reference" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="couleur..." name="color" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="quantite..." name="quantity" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="phase..." name="phase" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="mesures..." name="dimension" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="marque..." name="marque" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="type..." name="type" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="collection..." name="collection" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} /></Table.HeaderCell>
+              <Table.HeaderCell><input type="text" placeholder="carton..." name="carton" onChange={handleChange} /></Table.HeaderCell>
 
-          </Table.Row>
-          <Table.Row>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="nom..." name="name" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="reference..." name="reference" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="couleur..." name="color" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="quantite..." name="quantity" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="phase..." name="phase" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="mesures..." name="dimension" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="marque..." name="marque" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="type..." name="type" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="collection..." name="collection" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="carton..." name="carton" onChange={handleChange} /></Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
 
-          </Table.Row>
-        </Table.Header>
-
-        {state.filter === "default" ? getProductState.map((el) => (
-          <DashboardProductTable data={el} />
-        )) : null}
-        {state.filter === "new" ?
-          getProductState.map((el) => (
+          {state.filter === "default" ? getProductState.map((el) => (
             <DashboardProductTable data={el} />
-          )).reverse() : null}
+          )) : null}
+          {state.filter === "new" ?
+            getProductState.map((el) => (
+              <DashboardProductTable data={el} />
+            )).reverse() : null}
 
-        {state.filter === "name" ?
-          getProductState.filter(el => el.name.includes(state.search)).map((el) => (
-            <DashboardProductTable colorname={"red"} data={el} />
-          )).reverse() : null}
+          {state.filter === "name" ?
+            getProductState.filter(el => el.name.includes(state.search)).map((el) => (
+              <DashboardProductTable colorname={"red"} data={el} />
+            )).reverse() : null}
 
-        {state.filter === "color" ?
-          getProductState.filter(el => el.color === state.search).map((el) => (
-            <DashboardProductTable colorcolor={el.color} data={el} />
-          )).reverse() : null}
+          {state.filter === "color" ?
+            getProductState.filter(el => el.color === state.search).map((el) => (
+              <DashboardProductTable colorcolor={el.color} data={el} />
+            )).reverse() : null}
 
-        {state.filter === "reference" ?
-          getProductState.filter(el => el.reference === state.search).map((el) => (
-            <DashboardProductTable colorreference={"red"} data={el} />
-          )).reverse() : null}
-
-
-
-        <Table.Footer>
-          <Table.Row>
-            <Table.HeaderCell colSpan='6'>
-              <Menu floated='right' pagination>
-                <Menu.Item as='a' icon>
-                  <Icon name='chevron left' />
-                </Menu.Item>
-                <Menu.Item as='a'>1</Menu.Item>
-                <Menu.Item as='a'>2</Menu.Item>
-                <Menu.Item as='a'>3</Menu.Item>
-                <Menu.Item as='a'>4</Menu.Item>
-                <Menu.Item as='a'>5</Menu.Item>
-                <Menu.Item as='a'>6</Menu.Item>
-                <Menu.Item as='a'>7</Menu.Item>
-                <Menu.Item as='a'>8</Menu.Item>
-                <Menu.Item as='a'>9</Menu.Item>
-                <Menu.Item as='a'>10</Menu.Item>
-                <Menu.Item as='a'>11</Menu.Item>
-                <Menu.Item as='a'>12</Menu.Item>
-                <Menu.Item as='a'>13</Menu.Item>
+          {state.filter === "reference" ?
+            getProductState.filter(el => el.reference === state.search).map((el) => (
+              <DashboardProductTable colorreference={"red"} data={el} />
+            )).reverse() : null}
 
 
 
-                <Menu.Item as='a' icon>
-                  <Icon name='chevron right' />
-                </Menu.Item>
-              </Menu>
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Footer>
-      </Table>
-      <button></button>
+          <Table.Footer>
+            <Table.Row>
+              <Table.HeaderCell colSpan='6'>
+                <Menu floated='right' pagination>
+                  <Menu.Item as='a' icon>
+                    <Icon name='chevron left' />
+                  </Menu.Item>
+                  <Menu.Item as='a'>1</Menu.Item>
+                  <Menu.Item as='a'>2</Menu.Item>
+                  <Menu.Item as='a'>3</Menu.Item>
+                  <Menu.Item as='a'>4</Menu.Item>
+                  <Menu.Item as='a'>5</Menu.Item>
+                  <Menu.Item as='a'>6</Menu.Item>
+                  <Menu.Item as='a'>7</Menu.Item>
+                  <Menu.Item as='a'>8</Menu.Item>
+                  <Menu.Item as='a'>9</Menu.Item>
+                  <Menu.Item as='a'>10</Menu.Item>
+                  <Menu.Item as='a'>11</Menu.Item>
+                  <Menu.Item as='a'>12</Menu.Item>
+                  <Menu.Item as='a'>13</Menu.Item>
+
+
+
+                  <Menu.Item as='a' icon>
+                    <Icon name='chevron right' />
+                  </Menu.Item>
+                </Menu>
+              </Table.HeaderCell>
+            </Table.Row>
+          </Table.Footer>
+        </Table>
+      </div>
+
     </div>
   );
 };

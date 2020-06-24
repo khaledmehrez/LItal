@@ -39,7 +39,7 @@ const SignIn = () => {
                         <input id='passwordSave' type="password" placeholder="Enter password" onChange={(e) => setCounters({ ...state, password: e.target.value })} />
                     </div>
                     <br />
-                    <button onClick={authentification}>Sign in</button>
+                    <button className='ui button' onClick={authentification}>Sign in</button>
                 </div>
             </div >
         </center>
