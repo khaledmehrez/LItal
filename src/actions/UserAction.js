@@ -8,4 +8,12 @@ export function userdata(payload) {
         payload
     }
 }
+//get session
+export function sessionAction(payload) {
+    
+    return {
+        type: "session",
+        payload
+    }
+}
 

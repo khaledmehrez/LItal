@@ -38,9 +38,9 @@ const DashboardProductTable = (props) => {
 
 
 
-        <Table.Cell>  <button className='btn-trash' onClick={() => deleteProduct(data.id)}>d</button>
+        <Table.Cell>  <button className='ui button btn-trash' onClick={() => deleteProduct(data.id)}>X</button>
 
-          < Modal trigger={< button button className="btn-sign" > e</ button>} closeIcon >
+          < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
 
               <input type="text" placeholder="nom..." name="name" onChange={handleChange} />

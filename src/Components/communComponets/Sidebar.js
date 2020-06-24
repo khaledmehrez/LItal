@@ -21,6 +21,8 @@ const SidebarExampleVisible = () => {
       vertical
       visible
       width='thin'
+      
+      
     >
 
       <Menu.Item as={Link} to="/Product" >
@@ -41,6 +43,7 @@ const SidebarExampleVisible = () => {
       <Segment basic>
 
         <Switch>
+
           <Route path='/Product' component={DashboardProduct} />
           <Route path='/history' component={History} />
           <Route path='/gestionnaireUsers' component={GestionnaireUsers} />

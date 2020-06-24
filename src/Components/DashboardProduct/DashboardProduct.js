@@ -36,7 +36,7 @@ const DashboardProduct = () => {
   }
 
 
-  function handlechangeDate(event, data) {
+  function handlechangefilter(event, data) {
 
     setState(prevState => ({ ...prevState, filter: data.value }))
 
@@ -60,14 +60,15 @@ const DashboardProduct = () => {
 
     <div className="ui container" >
 
-      <Filter handlechangeDate={handlechangeDate} />
+      <Filter handlechangefilter={handlechangefilter} />
       {(state.filter != "default" && state.filter != "new") ? <div class="ui input"><input type="text" placeholder={state.filter} onChange={(event) => HandleSearch(event)} /></div> : null}
       <br /> <button onClick={addProduct}>p</button>
+      <div className="table-product">
       <Table
         celled
         selectable
-
-
+        unstackable
+        
 
 
 
@@ -89,21 +90,7 @@ const DashboardProduct = () => {
             <Table.HeaderCell >carton</Table.HeaderCell>
 
           </Table.Row>
-          <Table.Row>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="nom..." name="name" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="reference..." name="reference" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="couleur..." name="color" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="quantite..." name="quantity" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="phase..." name="phase" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="mesures..." name="dimension" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="marque..." name="marque" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="type..." name="type" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="collection..." name="collection" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} /></Table.HeaderCell>
-            <Table.HeaderCell><input type="text" placeholder="carton..." name="carton" onChange={handleChange} /></Table.HeaderCell>
-
-          </Table.Row>
+         
         </Table.Header>
 
         {state.filter === "default" ? getProductState.map((el) => (
@@ -162,6 +149,7 @@ const DashboardProduct = () => {
           </Table.Row>
         </Table.Footer>
       </Table>
+      </div>
       <button></button>
     </div>
   );
