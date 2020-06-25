@@ -2,15 +2,30 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Icon, Label, Menu, Table, Modal } from 'semantic-ui-react'
 import { deleteProductFromApi ,patchProductToApi} from "../../api/ApiProduct";
-
-
+import { PostHistoryFromApi } from "../../api/ApiHistory";
+import { getUserDataApi } from "../../api/ApiUsers";
 const DashboardProductTable = (props) => {
 
   const { data } = props;
+  const getUserDataState = useSelector((state) => state.getUserDataState);
   const dispatch = useDispatch()
-  function deleteProduct(i) {
-
+  useEffect(() => {
+    
+    dispatch(getUserDataApi());
+  }, [dispatch]);
+  //role of user
+  const name = { ...getUserDataState[0] }.firstName;
+  console.log(name)
+  //delete product
+  function deleteProduct(e) {
+const i=e.target.value
     dispatch(deleteProductFromApi(i))
+    const nameAction = e.target.name;
+    const date = new Date();
+    const nameProduct = state.name;
+    const objHistory = { name, nameAction, date, nameProduct };
+    console.log(objHistory);
+    dispatch(PostHistoryFromApi(objHistory));
 
   }
 
@@ -24,11 +39,16 @@ const DashboardProductTable = (props) => {
   }
 
 
-
-  function editProduct(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton) {
-
-    dispatch(patchProductToApi(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton))
-
+//edit
+  function editProduct(e) {
+const i=e.target.value
+    dispatch(patchProductToApi(i, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton))
+    const nameAction = e.target.name;
+    const date = new Date();
+    const nameProduct = state.name;
+    const objHistory = { name, nameAction, date, nameProduct };
+    console.log(objHistory);
+    dispatch(PostHistoryFromApi(objHistory));
   }
 
   return (
@@ -38,7 +58,7 @@ const DashboardProductTable = (props) => {
 
 
 
-        <Table.Cell>  <button className='ui button btn-trash' onClick={() => deleteProduct(data.id)}>X</button>
+        <Table.Cell>  <button className='ui button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
 
           < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
@@ -54,7 +74,7 @@ const DashboardProductTable = (props) => {
               <input type="text" placeholder="collection..." name="collection" onChange={handleChange} />
               <input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} />
               <input type="text" placeholder="carton..." name="carton" onChange={handleChange} />
-              <button type="submit" onClick={() => editProduct(data.id, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton)
+              <button type="submit" name="edit Product" value={data.id} onClick={editProduct
               }>ok</button>
 
 

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { userdata,sessionAction } from '../actions/UserAction'
+import { userdata,sessionAction,userDataAction } from '../actions/UserAction'
 
 
 
@@ -80,6 +80,17 @@ console.log(data)
 
     }
 }
+//get user data
+export function getUserDataApi() {
+
+    return (dispatch) => {
+        axios.get("http://localhost:4000/userData").then(response => {
+            dispatch(userDataAction(response.data))
+
+        })
+
+    }
+}
 //put user data
 export function PutUserSata(data) {
     
@@ -88,3 +99,4 @@ export function PutUserSata(data) {
     
         }
     }
+

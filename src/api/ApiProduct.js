@@ -11,7 +11,7 @@ export function getProductAPi() {
 
 //Post product
 export function PostProductAPi(data) {
-  window.location.reload();
+  
   return () =>
     axios.post("http://localhost:4000/Product", {
       name: data.name,
@@ -27,8 +27,9 @@ export function PostProductAPi(data) {
       carton: data.carton,
     });
 }
+//delete product
 export function deleteProductFromApi(i) {
-  window.location.reload()
+  
   return () => {
     axios.delete(`http://localhost:4000/Product/${i}`)
   }

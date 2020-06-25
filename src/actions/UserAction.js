@@ -17,3 +17,12 @@ export function sessionAction(payload) {
     }
 }
 
+//get user session
+
+export function userDataAction(payload) {
+    
+    return {
+        type: "user-data",
+        payload
+    }
+}

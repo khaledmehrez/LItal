@@ -10,5 +10,11 @@ export function getHistoryFromApi() {
         })
     }
 }
-
+//post history
+export function PostHistoryFromApi(data) {
+    console.log(data)
+    return () => {
+        axios.post("http://localhost:4000/history",data)
+    }
+}
 

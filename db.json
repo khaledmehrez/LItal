@@ -1,86 +1,7 @@
 {
   "Product": [
     {
-      "id": 2,
-      "reference": "",
-      "name": "fer",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": ""
-    },
-    {
-      "id": 3,
-      "reference": "5558",
-      "name": "sac 3",
-      "color": "marron",
-      "quantity": 1,
-      "phase": "production",
-      "dimension": "150/60",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": ""
-    },
-    {
-      "id": 4,
-      "reference": "5559",
-      "name": "sac 4",
-      "color": "pink",
-      "quantity": 1,
-      "phase": "production",
-      "dimension": "150/60",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": ""
-    },
-    {
-      "name": "sfsf",
-      "reference": "fsfsf",
-      "color": "sfsfsf",
-      "quantity": "sfsf",
-      "phase": "sfsfsfsfsf",
-      "dimension": "sfsfsfsfsf",
-      "id": 6
-    },
-    {
-      "name": "lmmmm",
-      "reference": "",
-      "color": "green",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 7
-    },
-    {
-      "name": "",
-      "reference": "",
-      "color": "blue",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 8
-    },
-    {
-      "name": "t",
+      "name": "hhh",
       "reference": "",
       "color": "",
       "quantity": null,
@@ -91,21 +12,7 @@
       "collection": "",
       "locallisation": "",
       "carton": "",
-      "id": 9
-    },
-    {
-      "name": "lllll",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 10
+      "id": 1
     }
   ],
   "history": [
@@ -136,6 +43,76 @@
       "date": "05/05/2020",
       "action": "add",
       "reference": "877"
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-24T21:57:00.962Z",
+      "nameProduct": "",
+      "id": 5
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-24T22:10:04.447Z",
+      "nameProduct": "green",
+      "id": 6
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-24T22:10:30.720Z",
+      "nameProduct": "f",
+      "id": 7
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-24T22:11:05.772Z",
+      "nameProduct": "5",
+      "id": 8
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-24T22:55:05.387Z",
+      "nameProduct": "sac5",
+      "id": 9
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-24T23:20:38.476Z",
+      "nameProduct": "",
+      "id": 10
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-24T23:20:41.227Z",
+      "nameProduct": "",
+      "id": 11
+    },
+    {
+      "name": "admin",
+      "nameAction": "edit Product",
+      "date": "2020-06-25T00:12:33.048Z",
+      "nameProduct": "q",
+      "id": 12
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T08:08:45.862Z",
+      "nameProduct": "",
+      "id": 13
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T08:09:53.142Z",
+      "nameProduct": "hhh",
+      "id": 14
     }
   ],
   "users": [

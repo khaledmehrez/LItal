@@ -64,7 +64,14 @@ const getUserReducer = (state = initialstate, action) => {
 }
 
 
+//get user data
+const getUserDataReducer = (state = initialstate, action) => {
 
+    if (action.type === "user-data") {
+        return action.payload
+    }
+    else return state
+}
 
 
 
@@ -91,6 +98,7 @@ export default combineReducers({
     getProductState: getProductreducer,
     historyState: historyReducer,
     usersState: usersReducer,
-    sessionState:getUserReducer
+    sessionState:getUserReducer,
+    getUserDataState:getUserDataReducer
 
 });
