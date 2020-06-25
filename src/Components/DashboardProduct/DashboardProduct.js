@@ -25,12 +25,23 @@ const DashboardProduct = () => {
     collection: "",
     locallisation: "",
     carton: "",
+
     filterName: "",
     filterReference: "",
     filterColor: "",
 
     search: "default",
     searchName: "default", searchColor: "default", searchReference: "default"
+
+    filterName:"",
+    filterColor:"",
+    filterReference:"",
+    filterQuantity:"",
+    SearchName:"",
+    SearchColor:"",
+    SearchReference:"",
+    SearchQuantity:""
+    
   });
   const getProductState = useSelector((state) => state.getProductState);
   const getUserDataState = useSelector((state) => state.getUserDataState);
@@ -43,6 +54,18 @@ const DashboardProduct = () => {
   }, [dispatch]);
 
   function handleChange(event) {
+
+
+    // const { name, value } = event.target;
+    // setState(prevState => ({ ...prevState, [name]: value }));
+    // console.log()
+
+
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+  }
 
 
     setState({
@@ -67,6 +90,25 @@ const DashboardProduct = () => {
     });
   }
   // role of user
+
+  function handlechangefilter(event, data) {
+    if(data.value==="name")
+    setState((prevState) => ({ ...prevState, filterName: data.value }));
+    if(data.value==="color")
+    setState((prevState) => ({ ...prevState, filterColor: data.value }));
+    if(data.value==="reference")
+    setState((prevState) => ({ ...prevState, filterReference: data.value }));
+    if(data.value==="quantity")
+    setState((prevState) => ({ ...prevState, filterQuantity : data.value }));
+  }
+
+  function HandleSearch(event) {
+    const data = event.target.value;
+    const n=event.target.name
+    setState((prevState) => ({ ...prevState, [n]: data }));
+  }
+// role of user
+
   const name = { ...getUserDataState[0] }.firstName;
   // add product
   function addProduct(e) {
@@ -78,14 +120,64 @@ const DashboardProduct = () => {
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
-
+  console.log(state)
   return (
     <div className="ui container">
       <Filter handlechangefilter={handlechangefilter} />
 
+
       <div class="ui input"><input type="text" placeholder="SEARCH NAME" name="searchName" onChange={(event) => HandleSearch(event)} /></div>
       <div class="ui input"><input type="text" placeholder="search by reference" name="searchReference" onChange={(event) => HandleSearch(event)} /></div>
       <div class="ui input"><input type="text" placeholder="SEARCH Color" name="searchColor" onChange={(event) => HandleSearch(event)} /></div>
+
+      {/* {state.filter != "default" && state.filter != "new" ? (
+        <div class="ui input">
+          <input
+            type="text"
+            placeholder={state.filter}
+            onChange={(event) => HandleSearch(event)}
+          />
+        </div>
+      ) : null} */}
+      
+        <div class="ui input">
+          <input
+            type="text"
+            placeholder="search by name"
+             name="SearchName"
+             key="name"
+            onChange={(event) => HandleSearch(event)}
+          />
+        </div>
+        <div class="ui input">
+          <input
+            type="text"
+            placeholder="search by color"
+             name="SearchColor"
+             key="color"
+            onChange={(event) => HandleSearch(event)}
+          />
+        </div>
+        <div class="ui input">
+          <input
+            type="text"
+            placeholder="search by referece"
+             name="SearchReference"
+             key="reference"
+            onChange={(event) => HandleSearch(event)}
+          />
+        </div>
+        <div class="ui input">
+          <input
+            type="text"
+            placeholder="quantity"
+             name="SearchQuantity"
+             key="quantity"
+            onChange={(event) => HandleSearch(event)}
+          />
+        </div>
+
+
 
       <div className="table-product">
         <Table celled selectable unstackable>
@@ -229,6 +321,7 @@ const DashboardProduct = () => {
           </Table.Header>
 
 
+
           {getProductState.filter(
 
             (state.filterName === "name") ?
@@ -253,6 +346,56 @@ const DashboardProduct = () => {
           ).map((el =>
             <DashboardProductTable data={el} />))
           }
+
+          {/* {state.filter === "default"
+            ? getProductState.map((el) => <DashboardProductTable data={el} />)
+            : null}
+          {state.filter === "new"
+            ? getProductState
+                .map((el) => <DashboardProductTable data={el} />)
+                .reverse()
+            : null}
+
+          {state.filter === "name"
+            ? getProductState
+                .filter((el) => el.name.includes(state.search))
+                .map((el) => (
+                  <DashboardProductTable colorname={"red"} data={el} />
+                ))
+                .reverse()
+            : null}
+
+          {state.filter === "color"
+            ? getProductState
+                .filter((el) => el.color === state.search)
+                .map((el) => (
+                  <DashboardProductTable colorcolor={el.color} data={el} />
+                ))
+                .reverse()
+            : null}
+
+          {state.filter === "reference"
+            ? getProductState
+                .filter((el) => el.reference === state.search)
+                .map((el) => (
+                  <DashboardProductTable colorreference={"red"} data={el} />
+                ))
+                .reverse()
+            : null} */}
+            {getProductState.filter(
+              state.filterName==="name" && state.SearchName!==""?el=>el.name.includes(state.SearchName):el=>el
+            ).filter(
+              state.filterColor==="color" && state.SearchColor!==""?el=>el.color.includes(state.SearchColor):el=>el)
+              .filter(
+               state.filterReference==="reference" && state.SearchReference!==""?el=>el.reference===state.SearchReference:el=>el
+              ).filter(
+                state.filterQuantity==="quantity" && state.SearchQuantity!==""?el=>el.quantity===state.SearchQuantity:el=>el
+               )
+              .map((el) => (
+                <DashboardProductTable colorreference={"red"} data={el} />
+              ))
+              .reverse()}
+
 
           <Table.Footer>
             <Table.Row>

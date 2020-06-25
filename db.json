@@ -1,6 +1,7 @@
 {
   "Product": [
     {
+
       "name": "sac 2",
       "reference": "445",
       "color": "red",
@@ -8,10 +9,20 @@
       "phase": "production",
       "dimension": "",
       "marque": "a",
+
+      "name": "hhh",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+
       "type": "",
       "collection": "",
       "locallisation": "",
       "carton": "",
+
       "id": 2
     },
     {
@@ -22,6 +33,31 @@
       "phase": "prototype",
       "dimension": "",
       "marque": "b",
+
+      "id": 1
+    },
+    {
+      "name": "a",
+      "reference": "5",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 2
+    },
+    {
+      "name": "a",
+      "reference": "4",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
       "type": "",
       "collection": "",
       "locallisation": "",
@@ -29,18 +65,121 @@
       "id": 3
     },
     {
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 4
+    },
+    {
+      "name": "sac1",
+      "reference": "1",
+      "color": "blue",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 5
+    },
+    {
+      "name": "sac2",
+      "reference": "1",
+      "color": "green",
+      "quantity": "1",
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 6
+    },
+    {
+      "name": "sac2",
+      "reference": "25",
+      "color": "green",
+      "quantity": "1",
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 7
+    },
+    {
+      "name": "sac2",
+      "reference": "25",
+      "color": "blue",
+      "quantity": "2",
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+
+      "id": 3
+    },
+    {
       "name": "sac3",
       "reference": "445",
       "color": "blue",
+
+      "id": 8
+    },
+    {
+      "name": "sac2",
+      "reference": "5",
+      "color": "red",
+      "quantity": "3",
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "reference": "",
+      "color": "",
+
       "quantity": null,
       "phase": "production",
       "dimension": "",
+
       "marque": "a",
       "type": "",
       "collection": "",
       "locallisation": "",
       "carton": "",
       "id": 4
+
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "5",
+      "id": 10
+
     }
   ],
   "history": [
@@ -145,30 +284,157 @@
     {
       "name": "admin",
       "nameAction": "add Product",
+
       "date": "2020-06-25T13:47:32.993Z",
       "nameProduct": "sac 2",
+
+      "date": "2020-06-25T21:35:54.854Z",
+      "nameProduct": "a",
+
       "id": 15
     },
     {
       "name": "admin",
       "nameAction": "add Product",
+
       "date": "2020-06-25T13:48:07.508Z",
       "nameProduct": "sac 2",
+
+      "date": "2020-06-25T21:36:02.852Z",
+      "nameProduct": "a",
+
       "id": 16
     },
     {
       "name": "admin",
       "nameAction": "add Product",
+
       "date": "2020-06-25T13:48:27.405Z",
       "nameProduct": "sac3",
+
+      "date": "2020-06-25T22:09:05.624Z",
+      "nameProduct": "",
+
       "id": 17
     },
     {
       "name": "admin",
+
       "nameAction": "delete product",
       "date": "2020-06-25T13:48:34.726Z",
       "nameProduct": "",
       "id": 18
+
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:09:16.173Z",
+      "nameProduct": "sac1",
+      "id": 18
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:09:30.199Z",
+      "nameProduct": "sac2",
+      "id": 19
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:09:48.428Z",
+      "nameProduct": "sac2",
+      "id": 20
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:18:17.235Z",
+      "nameProduct": "sac2 ",
+      "id": 21
+    },
+    {
+      "name": "admin",
+      "nameAction": "edit Product",
+      "date": "2020-06-25T22:36:58.724Z",
+      "nameProduct": "",
+      "id": 22
+    },
+    {
+      "name": "admin",
+      "nameAction": "edit Product",
+      "date": "2020-06-25T22:37:18.136Z",
+      "nameProduct": "",
+      "id": 23
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T22:37:51.335Z",
+      "nameProduct": "",
+      "id": 24
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T22:37:53.064Z",
+      "nameProduct": "",
+      "id": 25
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T22:37:57.306Z",
+      "nameProduct": "",
+      "id": 26
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T22:37:59.913Z",
+      "nameProduct": "",
+      "id": 27
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-25T22:38:01.792Z",
+      "nameProduct": "",
+      "id": 28
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:38:16.230Z",
+      "nameProduct": "sac2",
+      "id": 29
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:38:51.490Z",
+      "nameProduct": "sac2",
+      "id": 30
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:39:06.456Z",
+      "nameProduct": "sac2",
+      "id": 31
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T22:39:21.441Z",
+      "nameProduct": "sac2",
+      "id": 32
+    },
+    {
+      "name": "admin",
+      "nameAction": "add Product",
+      "date": "2020-06-25T23:29:16.928Z",
+      "nameProduct": "",
+      "id": 33
+
     }
   ],
   "users": [
