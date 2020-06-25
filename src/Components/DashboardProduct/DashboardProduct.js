@@ -25,6 +25,14 @@ const DashboardProduct = () => {
     collection: "",
     locallisation: "",
     carton: "",
+
+    filterName: "",
+    filterReference: "",
+    filterColor: "",
+
+    search: "default",
+    searchName: "default", searchColor: "default", searchReference: "default"
+
     filterName:"",
     filterColor:"",
     filterReference:"",
@@ -46,15 +54,42 @@ const DashboardProduct = () => {
   }, [dispatch]);
 
   function handleChange(event) {
+
+
     // const { name, value } = event.target;
     // setState(prevState => ({ ...prevState, [name]: value }));
     // console.log()
+
 
     setState({
       ...state,
       [event.target.name]: event.target.value,
     });
   }
+
+
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  function handlechangefilter(event, data) {
+    if (data.value === "name")
+      setState((prevState) => ({ ...prevState, filterName: data.value }));
+    if (data.value === "color")
+      setState((prevState) => ({ ...prevState, filterColor: data.value }));
+    if (data.value === "reference")
+      setState((prevState) => ({ ...prevState, filterReference: data.value }));
+  }
+
+  function HandleSearch(event) {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+  }
+  // role of user
 
   function handlechangefilter(event, data) {
     if(data.value==="name")
@@ -73,6 +108,7 @@ const DashboardProduct = () => {
     setState((prevState) => ({ ...prevState, [n]: data }));
   }
 // role of user
+
   const name = { ...getUserDataState[0] }.firstName;
   // add product
   function addProduct(e) {
@@ -88,6 +124,12 @@ const DashboardProduct = () => {
   return (
     <div className="ui container">
       <Filter handlechangefilter={handlechangefilter} />
+
+
+      <div class="ui input"><input type="text" placeholder="SEARCH NAME" name="searchName" onChange={(event) => HandleSearch(event)} /></div>
+      <div class="ui input"><input type="text" placeholder="search by reference" name="searchReference" onChange={(event) => HandleSearch(event)} /></div>
+      <div class="ui input"><input type="text" placeholder="SEARCH Color" name="searchColor" onChange={(event) => HandleSearch(event)} /></div>
+
       {/* {state.filter != "default" && state.filter != "new" ? (
         <div class="ui input">
           <input
@@ -134,6 +176,7 @@ const DashboardProduct = () => {
             onChange={(event) => HandleSearch(event)}
           />
         </div>
+
 
 
       <div className="table-product">
@@ -277,6 +320,33 @@ const DashboardProduct = () => {
             </Table.Row>
           </Table.Header>
 
+
+
+          {getProductState.filter(
+
+            (state.filterName === "name") ?
+              el => el.name.includes(state.searchName.toLowerCase())
+
+              :
+              el => el
+          ).filter(
+
+            (state.filterColor === "color") ?
+              el => el.color === state.searchColor.toLowerCase()
+              :
+              el => el
+
+          ).filter(
+
+            (state.filterReference === "reference") ?
+              el => el.reference === state.searchReference.toLowerCase()
+              :
+              el => el
+
+          ).map((el =>
+            <DashboardProductTable data={el} />))
+          }
+
           {/* {state.filter === "default"
             ? getProductState.map((el) => <DashboardProductTable data={el} />)
             : null}
@@ -325,6 +395,7 @@ const DashboardProduct = () => {
                 <DashboardProductTable colorreference={"red"} data={el} />
               ))
               .reverse()}
+
 
           <Table.Footer>
             <Table.Row>

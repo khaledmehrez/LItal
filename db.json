@@ -1,6 +1,15 @@
 {
   "Product": [
     {
+
+      "name": "sac 2",
+      "reference": "445",
+      "color": "red",
+      "quantity": null,
+      "phase": "production",
+      "dimension": "",
+      "marque": "a",
+
       "name": "hhh",
       "reference": "",
       "color": "",
@@ -8,10 +17,23 @@
       "phase": "",
       "dimension": "",
       "marque": "",
+
       "type": "",
       "collection": "",
       "locallisation": "",
       "carton": "",
+
+      "id": 2
+    },
+    {
+      "name": "sac 2",
+      "reference": "448",
+      "color": "blue",
+      "quantity": null,
+      "phase": "prototype",
+      "dimension": "",
+      "marque": "b",
+
       "id": 1
     },
     {
@@ -106,10 +128,19 @@
       "phase": "",
       "dimension": "",
       "marque": "",
+
       "type": "",
       "collection": "",
       "locallisation": "",
       "carton": "",
+
+      "id": 3
+    },
+    {
+      "name": "sac3",
+      "reference": "445",
+      "color": "blue",
+
       "id": 8
     },
     {
@@ -130,15 +161,25 @@
       "name": "",
       "reference": "",
       "color": "",
+
       "quantity": null,
-      "phase": "",
+      "phase": "production",
       "dimension": "",
+
+      "marque": "a",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "id": 4
+
       "marque": "",
       "type": "",
       "collection": "",
       "locallisation": "",
       "carton": "5",
       "id": 10
+
     }
   ],
   "history": [
@@ -243,26 +284,47 @@
     {
       "name": "admin",
       "nameAction": "add Product",
+
+      "date": "2020-06-25T13:47:32.993Z",
+      "nameProduct": "sac 2",
+
       "date": "2020-06-25T21:35:54.854Z",
       "nameProduct": "a",
+
       "id": 15
     },
     {
       "name": "admin",
       "nameAction": "add Product",
+
+      "date": "2020-06-25T13:48:07.508Z",
+      "nameProduct": "sac 2",
+
       "date": "2020-06-25T21:36:02.852Z",
       "nameProduct": "a",
+
       "id": 16
     },
     {
       "name": "admin",
       "nameAction": "add Product",
+
+      "date": "2020-06-25T13:48:27.405Z",
+      "nameProduct": "sac3",
+
       "date": "2020-06-25T22:09:05.624Z",
       "nameProduct": "",
+
       "id": 17
     },
     {
       "name": "admin",
+
+      "nameAction": "delete product",
+      "date": "2020-06-25T13:48:34.726Z",
+      "nameProduct": "",
+      "id": 18
+
       "nameAction": "add Product",
       "date": "2020-06-25T22:09:16.173Z",
       "nameProduct": "sac1",
@@ -372,6 +434,7 @@
       "date": "2020-06-25T23:29:16.928Z",
       "nameProduct": "",
       "id": 33
+
     }
   ],
   "users": [

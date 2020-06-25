@@ -12,7 +12,11 @@ import Sidebar from "./Components/communComponets/Sidebar";
 import DashboardManagement from "./Components/DashboardProduct/DashboardProduct";
 
 import SignIn from "./Components/users/signIn"
+
+import { getUserSession } from './api/ApiUsers';
+
 import {getUserSession  } from './api/ApiUsers';
+
 
 const App = () => {
   const sessionState = useSelector((state) => state.sessionState)
@@ -20,10 +24,35 @@ const App = () => {
 
   const dispatch = useDispatch()
 
+
   useEffect(() => { dispatch(getUserSession()); }, [dispatch]);
 
 
+  console.log(sessionState.role)
+
+
+
+  useEffect(() => { dispatch(getUserSession()); }, [dispatch]);
+
+
+
 console.log(sessionState.role)
+
+
+
+  if (sessionState.role === "admin" || sessionState.role === "moderateur") {
+    return (
+      <div className="App">
+        <Navbar />
+        <Sidebar />
+      </div>)
+  }
+  else
+    return (<SignIn />)
+
+
+
+
 
 
   
@@ -42,6 +71,7 @@ console.log(sessionState.role)
    
 
   
+
 }
 
 
