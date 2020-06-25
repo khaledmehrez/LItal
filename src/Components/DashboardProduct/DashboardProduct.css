@@ -1,23 +1,21 @@
-.ui.celled.table{
-   
 
-    
-}
-.lll{
-    overflow-x: scroll;
-    max-width: 80%;
-}
 input{
     width:100px;
 }
-@media only screen and (max-width: 600px) {
-    .ui.celled.table{
-       /* width:1px;
-       margin-left: -20px; */
-       overflow-x: scroll;
-       max-width: 50%;
-
-   
+.table-product{
+    
+    max-width: 100%;
+        overflow-x: scroll;
+   width:1000px;
+  
+    
+}
+@media only screen and (max-width: 400px) {
+    .table-product{
+      
+      
+       max-width: 100%;
+        overflow-x: scroll;
         
     }
     

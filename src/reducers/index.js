@@ -10,7 +10,7 @@ const testreducer = (state = initialstate, action) => {
     else return state
 }
 
-//**************************kHALED *****************************************************/
+// get product reducer
 const getProductreducer = (state = initialstate, action) => {
 
     if (action.type === "get-product") {
@@ -31,7 +31,7 @@ const getProductreducer = (state = initialstate, action) => {
 
 
 
-//**************************TAKWA *****************************************************/
+
 
 //history//
 const tabHistory = []
@@ -53,11 +53,25 @@ function usersReducer(state = tabUsers, action) {
 };
 
 
+//get user session
+
+const getUserReducer = (state = initialstate, action) => {
+
+    if (action.type === "session") {
+        return action.payload
+    }
+    else return state
+}
 
 
+//get user data
+const getUserDataReducer = (state = initialstate, action) => {
 
-
-
+    if (action.type === "user-data") {
+        return action.payload
+    }
+    else return state
+}
 
 
 
@@ -83,6 +97,8 @@ export default combineReducers({
     testin: testreducer,
     getProductState: getProductreducer,
     historyState: historyReducer,
-    usersState: usersReducer
+    usersState: usersReducer,
+    sessionState:getUserReducer,
+    getUserDataState:getUserDataReducer
 
 });

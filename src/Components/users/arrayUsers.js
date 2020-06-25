@@ -12,12 +12,12 @@ const ArrayUsers = (props) => {
 
     }
     const [state, setState] = useState({
-        firstName: dataUsers.firstName,
-        lastName: dataUsers.lastName,
-        email: dataUsers.email,
-        userName: dataUsers.userName,
-        post: dataUsers.post,
-        password: dataUsers.password
+        firstName: '',
+        lastName: '',
+        email: '',
+        userName: '',
+        post: '',
+        password: ''
 
     });
     const handleChange = event => {
@@ -35,27 +35,14 @@ const ArrayUsers = (props) => {
     return (
         <tr>
             <td class="">{dataUsers.firstName}</td>
-
-            < Modal trigger={< button button className=" ui button btn-sign" >plus de detai</ button>} closeIcon >
-                <Modal.Content >
-
-                <p > lastName:{dataUsers.lastName}</p>
-                   <p>email:{dataUsers.email} </p> 
-                   <p>userName:{dataUsers.userName}</p>
-                   <p>post:{dataUsers.post}</p> 
-                   <p>password:{dataUsers.password}</p> 
-                </Modal.Content>
-
-            </Modal >
-
-
-
-
-          
-
+            <td class="">{dataUsers.lastName}</td>
+            <td class="">{dataUsers.email}</td>
+            <td class="">{dataUsers.userName}</td>
+            <td class="">{dataUsers.post}</td>
+            <td class="">{dataUsers.password}</td>
             <td class="">
-                <button className='ui button btn-trash' onClick={() => deleteUsers(dataUsers.id)}>d</button>
-                < Modal trigger={< button button className=" ui button btn-sign" > e</ button>} closeIcon >
+                <button className='btn-trash' onClick={() => deleteUsers(dataUsers.id)}>d</button>
+                < Modal trigger={< button button className="btn-sign" > e</ button>} closeIcon >
                     <Modal.Content >
 
                         <center>
@@ -63,38 +50,38 @@ const ArrayUsers = (props) => {
 
                             <div className="form-group">
 
-                                <input id='firstName' type="text" value={state.firstName} onChange={handleChange} />
+                                <input id='firstName' type="text" placeholder="firstName" onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='lastName' type="text" value={state.lastName} onChange={handleChange} />
+                                <input id='lastName' type="text" placeholder="lastName" onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='userName' type="text" value={state.userName} onChange={handleChange} />
+                                <input id='userName' type="text" placeholder="userName" onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input id='email' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" value={state.email} onChange={handleChange} />
-                                <br />
-                            </div>
-                            <br />
-                            <div className="form-group">
-
-                                <input id='password' type="password" value={state.password} maxLength="6" onChange={handleChange} />
+                                <input id='email' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" placeholder="Enter email" onChange={handleChange} />
                                 <br />
                             </div>
                             <br />
                             <div className="form-group">
 
-                                <input id='confirmationPassword' type="password" value={state.post} maxLength="6"
+                                <input id='password' type="password" placeholder="Enter password" maxLength="6" onChange={handleChange} />
+                                <br />
+                            </div>
+                            <br />
+                            <div className="form-group">
+
+                                <input id='confirmationPassword' type="password" placeholder="Confirmer password" maxLength="6"
                                 />
                             </div>
                             <br />
-                            <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers.id, state.firstName, state.lastName, state.email, state.userName, state.post, state.password)
+                            <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers.id,state.firstName, state.lastName, state.email, state.userName, state.post, state.password)
                             }>ok</button>
 
 

@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Icon, Label, Menu, Table, Modal } from 'semantic-ui-react'
-import { deleteProductFromApi, patchProductToApi } from "../../api/ApiProduct";
-
-
+import { deleteProductFromApi ,patchProductToApi} from "../../api/ApiProduct";
+import { PostHistoryFromApi } from "../../api/ApiHistory";
+import { getUserDataApi } from "../../api/ApiUsers";
 const DashboardProductTable = (props) => {
 
   const { data } = props;
+  const getUserDataState = useSelector((state) => state.getUserDataState);
   const dispatch = useDispatch()
-  function deleteProduct(i) {
-
+  useEffect(() => {
+    
+    dispatch(getUserDataApi());
+  }, [dispatch]);
+  //role of user
+  const name = { ...getUserDataState[0] }.firstName;
+  console.log(name)
+  //delete product
+  function deleteProduct(e) {
+const i=e.target.value
     dispatch(deleteProductFromApi(i))
+    const nameAction = e.target.name;
+    const date = new Date();
+    const nameProduct = state.name;
+    const objHistory = { name, nameAction, date, nameProduct };
+    console.log(objHistory);
+    dispatch(PostHistoryFromApi(objHistory));
 
   }
 
-  const [state, setState] = useState({ name: props.data.name, reference: props.data.reference, color: props.data.color, quantity: props.data.quantity, phase: props.data.phase, dimension: props.data.dimension, marque: props.data.marque, type: props.data.type, collection: props.data.collection, locallisation: props.data.locallisation, carton: props.data.carton });
+  const [state, setState] = useState({ name: "", reference: "", color: "", quantity: null, phase: "", dimension: "", marque: "", type: "", collection: "", locallisation: "", carton: "" });
   function handleChange(event) {
     setState({
       ...state,
@@ -24,11 +39,16 @@ const DashboardProductTable = (props) => {
   }
 
 
-
-  function editProduct(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton) {
-
-    dispatch(patchProductToApi(i, name, reference, color, quantity, phase, dimension, marque, type, collection, locallisation, carton))
-
+//edit
+  function editProduct(e) {
+const i=e.target.value
+    dispatch(patchProductToApi(i, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton))
+    const nameAction = e.target.name;
+    const date = new Date();
+    const nameProduct = state.name;
+    const objHistory = { name, nameAction, date, nameProduct };
+    console.log(objHistory);
+    dispatch(PostHistoryFromApi(objHistory));
   }
 
   return (
@@ -38,23 +58,23 @@ const DashboardProductTable = (props) => {
 
 
 
-        <Table.Cell>  <button name="suppression" className='btn-trash ui button' onClick={() => deleteProduct(data.id)}>d</button>
+        <Table.Cell>  <button className='ui button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
 
-          < Modal trigger={< button button className="btn-sign ui button" > e</ button>} closeIcon >
+          < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
 
-              <input type="text" value={state.name} name="name" onChange={handleChange} />
-              <input type="text" value={state.reference} name="reference" onChange={handleChange} />
-              <input type="text" value={state.color} name="color" onChange={handleChange} />
-              <input type="text" value={state.quantity} name="quantity" onChange={handleChange} />
-              <input type="text" value={state.phase} name="phase" onChange={handleChange} />
-              <input type="text" value={state.dimension} name="dimension" onChange={handleChange} />
-              <input type="text" value={state.marque} name="marque" onChange={handleChange} />
-              <input type="text" value={state.type} name="type" onChange={handleChange} />
-              <input type="text" value={state.collection} name="collection" onChange={handleChange} />
-              <input type="text" value={state.locallisation} name="locallisation" onChange={handleChange} />
-              <input type="text" value={state.carton} name="carton" onChange={handleChange} />
-              <button type="submit"  name="modification" onClick={() => editProduct(data.id, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton)
+              <input type="text" placeholder="nom..." name="name" onChange={handleChange} />
+              <input type="text" placeholder="reference..." name="reference" onChange={handleChange} />
+              <input type="text" placeholder="couleur..." name="color" onChange={handleChange} />
+              <input type="text" placeholder="quantite..." name="quantity" onChange={handleChange} />
+              <input type="text" placeholder="phase..." name="phase" onChange={handleChange} />
+              <input type="text" placeholder="mesures..." name="dimension" onChange={handleChange} />
+              <input type="text" placeholder="marque..." name="marque" onChange={handleChange} />
+              <input type="text" placeholder="type..." name="type" onChange={handleChange} />
+              <input type="text" placeholder="collection..." name="collection" onChange={handleChange} />
+              <input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} />
+              <input type="text" placeholder="carton..." name="carton" onChange={handleChange} />
+              <button type="submit" name="edit Product" value={data.id} onClick={editProduct
               }>ok</button>
 
 

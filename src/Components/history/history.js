@@ -15,8 +15,8 @@ const History = () => {
 
 
     return (
-        <div>
-            <table class="ui celled table">
+        <div className="ui container">
+            <table class="ui celled table ">
                 <thead class="">
                     <tr class="">
 

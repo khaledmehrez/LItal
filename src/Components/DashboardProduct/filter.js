@@ -7,6 +7,7 @@ const countryOptions = [
   { key: 'af', value: 'name', text: 'name' },
   { key: 'af', value: 'color', text: 'color' },
   { key: 'af', value: 'reference', text: 'reference' },
+
   
   
 ]
@@ -15,7 +16,7 @@ const Filter = (props) => (
   <Dropdown
   className= "ui segment"
     placeholder='Select Country'
-    onChange={props.handlechangeDate}
+    onChange={props.handlechangefilter}
     search
     selection
     options={countryOptions}

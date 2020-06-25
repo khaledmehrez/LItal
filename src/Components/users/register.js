@@ -42,7 +42,7 @@ function Register() {
 
 
     return (
-        < Modal trigger={< button button className="btn-sign ui button" > ajout</ button>} closeIcon >
+        < Modal trigger={< button button className="btn-sign" > ajout</ button>} closeIcon >
 
             <Modal.Content >
 
@@ -69,12 +69,7 @@ function Register() {
                         <br />
                     </div>
                     <br />
-                    <div className="form-group">
 
-                        <input id='post' type="text" placeholder="role" onChange={handleChange} />
-                        <br />
-                    </div>
-                    <br />
                     <div className="form-group">
 
                         <input id='email' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" placeholder="Enter email" onChange={handleChange} />
