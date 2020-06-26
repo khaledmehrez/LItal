@@ -8,6 +8,7 @@ const DashboardProductTable = (props) => {
 
   const { data } = props;
   const getUserDataState = useSelector((state) => state.getUserDataState);
+  const [state, setState] = useState({ name: props.data.name, reference: props.data.reference, color: props.data.color, quantity: props.data.quantity, phase: props.data.phase, dimension: props.data.dimension, marque: props.data.marque, type: props.data.type, collection: props.data.collection, locallisation: props.data.locallisation, carton: props.data.carton });
   const dispatch = useDispatch()
   useEffect(() => {
     
@@ -29,7 +30,7 @@ const i=e.target.value
 
   }
 
-  const [state, setState] = useState({ name: "", reference: "", color: "", quantity: null, phase: "", dimension: "", marque: "", type: "", collection: "", locallisation: "", carton: "" });
+  // const [state, setState] = useState({ name: "", reference: "", color: "", quantity: null, phase: "", dimension: "", marque: "", type: "", collection: "", locallisation: "", carton: "" });
   function handleChange(event) {
     setState({
       ...state,
@@ -62,18 +63,17 @@ const i=e.target.value
 
           < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
-
-              <input type="text" placeholder="nom..." name="name" onChange={handleChange} />
-              <input type="text" placeholder="reference..." name="reference" onChange={handleChange} />
-              <input type="text" placeholder="couleur..." name="color" onChange={handleChange} />
-              <input type="text" placeholder="quantite..." name="quantity" onChange={handleChange} />
-              <input type="text" placeholder="phase..." name="phase" onChange={handleChange} />
-              <input type="text" placeholder="mesures..." name="dimension" onChange={handleChange} />
-              <input type="text" placeholder="marque..." name="marque" onChange={handleChange} />
-              <input type="text" placeholder="type..." name="type" onChange={handleChange} />
-              <input type="text" placeholder="collection..." name="collection" onChange={handleChange} />
-              <input type="text" placeholder="locallisation..." name="locallisation" onChange={handleChange} />
-              <input type="text" placeholder="carton..." name="carton" onChange={handleChange} />
+            <input type="text" value={state.name} name="name" onChange={handleChange} />
+            <input type="text" value={state.reference} name="reference" onChange={handleChange} />
+              <input type="text" value={state.color} name="color" onChange={handleChange} />
+              <input type="text" value={state.quantity} name="quantity" onChange={handleChange} />
+              <input type="text" value={state.phase} name="phase" onChange={handleChange} />
+              <input type="text" value={state.dimension} name="dimension" onChange={handleChange} />
+              <input type="text" value={state.marque} name="marque" onChange={handleChange} />
+              <input type="text" value={state.type} name="type" onChange={handleChange} />
+              <input type="text" value={state.collection} name="collection" onChange={handleChange} />
+              <input type="text" value={state.locallisation} name="locallisation" onChange={handleChange} />
+              <input type="text" value={state.carton} name="carton" onChange={handleChange} />
               <button type="submit" name="edit Product" value={data.id} onClick={editProduct
               }>ok</button>
 
