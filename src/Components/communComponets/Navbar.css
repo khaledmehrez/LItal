@@ -1,0 +1,26 @@
+.logo_navbar{
+    margin-top: 10px;
+    width:170px;
+    height: 50px;
+}
+.search_navbar{
+   width: 200px; 
+}
+.deconnection_button{
+    width: 180px;
+    height: 1px;
+    color : white;
+    border: none;
+background: #411C;
+color: white
+!important;
+font-weight: 30;
+padding: 17px;
+border-radius: 3px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+text-align: center;
+margin-top: 15px;
+margin-left: 20px;
+
+}

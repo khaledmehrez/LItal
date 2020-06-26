@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './dashboardProduct.css'
 import { useDispatch, useSelector } from "react-redux";
 import { Icon, Label, Menu, Table, Modal } from 'semantic-ui-react'
 import { deleteProductFromApi ,patchProductToApi} from "../../api/ApiProduct";
@@ -63,6 +64,8 @@ const i=e.target.value
 
           < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
+            <h3>Editer Article </h3>
+              <br />
             <input type="text" value={state.name} name="name" onChange={handleChange} />
             <input type="text" value={state.reference} name="reference" onChange={handleChange} />
               <input type="text" value={state.color} name="color" onChange={handleChange} />
@@ -75,7 +78,10 @@ const i=e.target.value
               <input type="text" value={state.locallisation} name="locallisation" onChange={handleChange} />
               <input type="text" value={state.carton} name="carton" onChange={handleChange} />
               <button type="submit" name="edit Product" value={data.id} onClick={editProduct
-              }>ok</button>
+              }  class="ui positive button"
+              >
+                Sauvgarder
+              </button>
 
 
             </Modal.Content>

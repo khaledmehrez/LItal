@@ -39,11 +39,11 @@ const ArrayUsers = (props) => {
             < Modal trigger={< button button className=" ui button btn-sign" >plus de detai</ button>} closeIcon >
                 <Modal.Content >
 
-                <p > lastName:{dataUsers.lastName}</p>
-                   <p>email:{dataUsers.email} </p> 
-                   <p>userName:{dataUsers.userName}</p>
-                   <p>post:{dataUsers.post}</p> 
-                   <p>password:{dataUsers.password}</p> 
+                <p > Prénom:{dataUsers.lastName}</p>
+                   <p>Email:{dataUsers.email} </p> 
+                   <p>Identifiant:{dataUsers.userName}</p>
+                   <p>Poste:{dataUsers.post}</p> 
+                   <p>Mot de passe:{dataUsers.password}</p> 
                 </Modal.Content>
 
             </Modal >
@@ -59,7 +59,7 @@ const ArrayUsers = (props) => {
                     <Modal.Content >
 
                         <center>
-                            <h3>modifier moderateur </h3>
+                            <h3>Modifier Modérateur  </h3>
 
                             <div className="form-group">
 

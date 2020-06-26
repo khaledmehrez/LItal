@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
+import "./signin.css"
+import logoLital from "./logoLItal.png"
 
 import { getUserFromApi,patchUserSession,PutUserSata } from '../../api/ApiUsers';
 
@@ -41,46 +43,35 @@ const SignIn = () => {
     }
 
     return (
-        
+        <div>
+          <img  className="img_login_page" src={logoLital} alt="logo lital" />
+        <div className="pageLogin">
             <div className="ui form">
-          <div class="field">
-            <label>Email</label>
-            <input id='emailSave' placeholder="email" name="mail" pattern=".+@(gmail\.com|yahoo\.fr)" className="form-control" placeholder="Enter email" onChange={(e) => setCounters({ ...state, email: e.target.value })} />
+          
+          <div class="field_login">
+          <h3> Connexion </h3>
+          
+            <input className="input_login" id='emailSave' placeholder="Email" name="mail" pattern=".+@(gmail\.com|yahoo\.fr)" className="form-control" placeholder="Enter email" onChange={(e) => setCounters({ ...state, email: e.target.value })} />
           </div>
           <div class="field">
-            <label>Password</label>
-            <input id='passwordSave' placeholder="password" name="password" onChange={(e) => setCounters({ ...state, password: e.target.value })}/>
+         
+            <input  className="input_login" id='passwordSave' placeholder="Mot de passe " name="password" onChange={(e) => setCounters({ ...state, password: e.target.value })}/>
           </div>
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" class="hidden" readonly="" tabindex="0" />
-              <label>I agree to the Terms and Conditions</label>
+              <label className="loginLabelRember">Se souvenir de moi </label>
             </div>
           </div>
-          <button type="button" class="ui button" onClick={authentification}>
-            sign in
+          <button type="button"  className="login_button"  onClick={authentification}>
+            Se connecter 
           </button>
           </div>
+          </div>
+          </div>
         
-        // <center>
-        //     <div className='box-sigg-in'>
-
-        //         <div>
-        //             <h3>Sign In</h3>
-        //             <div className="fo">
-        //                 <input id='emailSave' type="email" pattern=".+@(gmail\.com|yahoo\.fr)" className="form-control" placeholder="Enter email" onChange={(e) => setCounters({ ...state, email: e.target.value })} />
-
-        //             </div>
-        //             <br />
-        //             <div>
-        //                 <input id='passwordSave' type="password" placeholder="Enter password" onChange={(e) => setCounters({ ...state, password: e.target.value })} />
-        //             </div>
-        //             <br />
-        //             <button onClick={authentification}>Sign in</button>
-        //         </div>
-        //     </div >
-        // </center>
-
+ 
+    
     )
 }
 

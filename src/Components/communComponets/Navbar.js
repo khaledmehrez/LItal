@@ -15,12 +15,12 @@ const Navbar =()=> {
           <div class="right menu">
             <div class="item">
               <div class="ui icon input">
-                <input type="text" placeholder="Search..." />
+                <input type="text"  className="search_navbar"  placeholder="Search..." />
                 <i aria-hidden="true" class="search icon"></i>
               </div>
             </div>
             
-            <button class=" item" onClick={()=>dispatch(patchUserSession("guest"))}>Logout</button>
+            <button className="deconnection_button"  class=" item" onClick={()=>dispatch(patchUserSession("guest"))}> <i aria-hidden="true"   class="log out icon"></i> Se déconnecter </button>
 
           </div>
         </div>

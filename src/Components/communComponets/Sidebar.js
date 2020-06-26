@@ -17,7 +17,7 @@ const SidebarExampleVisible = () => {
       as={Menu}
       animation='push'
       icon='labeled'
-      inverted
+     
       vertical
       visible
       width='thin'
@@ -26,16 +26,16 @@ const SidebarExampleVisible = () => {
     >
 
       <Menu.Item as={Link} to="/Product" >
-        <Icon name='home' />
-        Home
+      <Icon name='chart bar' />
+        Gestionnaire de Stock
       </Menu.Item>
       <Menu.Item as={Link} to="/gestionnaireUsers">
-
-        users
+      <Icon name='users' />
+        Gestionnaire des utilisateurs 
       </Menu.Item>
       <Menu.Item as={Link} to="/history">
-
-        history
+      <Icon name='history' />
+        Historique
       </Menu.Item>
     </Sidebar>
 

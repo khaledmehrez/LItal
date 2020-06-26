@@ -1,0 +1,60 @@
+.pageLogin {
+    box-shadow: 8px 8px 10px rgb(236, 230, 230);
+    width:450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img_login_page {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 90px;
+}
+.login_button{
+    width: 120px;
+    height: 20px;
+    color : white;
+    border: none;
+background: #857874;
+color: #ffffff !important;
+/*font-weight: 100;*/
+padding: 20px;
+
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+text-align: center;
+margin-top: 20px;
+margin-left: 300px;
+
+}
+
+.loginLabel{
+    font-weight: 80;
+    padding: 20px;
+    color: #857874 ;
+    margin-top: 10px;
+}
+label .loginLabelRember{
+   /* font-weight: 70;*/
+    color: #857874 ;
+  
+}
+.input_login {
+    margin-top: 30px !important;
+    border: none !important;
+   border-bottom:#857874 solid 2px !important; 
+   padding: 8px 10px!important;
+   border-radius: 4px !important;
+   cursor: pointer !important;
+   float: left !important;
+   height: 25px !important;
+   width: 90%!important;
+   margin-bottom: 40px !important;  
+
+  
+ }

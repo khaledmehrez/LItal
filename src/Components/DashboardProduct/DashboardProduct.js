@@ -140,19 +140,19 @@ const DashboardProduct = () => {
         <Table celled selectable unstackable>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell></Table.HeaderCell>
-              <Table.HeaderCell>nom</Table.HeaderCell>
-              <Table.HeaderCell>reference</Table.HeaderCell>
-              <Table.HeaderCell>couleur</Table.HeaderCell>
-              <Table.HeaderCell>quantite</Table.HeaderCell>
-              <Table.HeaderCell>phase</Table.HeaderCell>
-              <Table.HeaderCell>mesures</Table.HeaderCell>
-              <Table.HeaderCell>marque</Table.HeaderCell>
-              <Table.HeaderCell>type</Table.HeaderCell>
+            <Table.HeaderCell></Table.HeaderCell>
+              <Table.HeaderCell>Nom</Table.HeaderCell>
+              <Table.HeaderCell>Référence</Table.HeaderCell>
+              <Table.HeaderCell>Couleur</Table.HeaderCell>
+              <Table.HeaderCell>Quantité</Table.HeaderCell>
+              <Table.HeaderCell>Phase</Table.HeaderCell>
+              <Table.HeaderCell>Mesure</Table.HeaderCell>
+              <Table.HeaderCell>Marque</Table.HeaderCell>
+              <Table.HeaderCell>Type</Table.HeaderCell>
               {/* <Table.HeaderCell >prototype ou production</Table.HeaderCell> */}
-              <Table.HeaderCell>collection</Table.HeaderCell>
-              <Table.HeaderCell>locallisation</Table.HeaderCell>
-              <Table.HeaderCell>carton</Table.HeaderCell>
+              <Table.HeaderCell>Collection</Table.HeaderCell>
+              <Table.HeaderCell>Locallisation</Table.HeaderCell>
+              <Table.HeaderCell>Carton</Table.HeaderCell>
             </Table.Row>
             <Table.Row>
               <Table.HeaderCell>
@@ -161,7 +161,7 @@ const DashboardProduct = () => {
                   name="add Product"
                   onClick={addProduct}
                 >
-                  p
+                   Ajout Article
                 </button>
               </Table.HeaderCell>
               <Table.HeaderCell>

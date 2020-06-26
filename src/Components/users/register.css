@@ -1,0 +1,32 @@
+.add_user_button{
+  
+        width: 180px;
+        height: 1px;
+        color : white;
+        border: none;
+    background: #411C;
+    color: white
+    !important;
+    font-weight: 30;
+    padding: 17px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 20px;
+    
+
+}
+
+.input_ajout_utilisateur{
+    margin-left: 80px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   border: 3px solid #857874;
+   border-radius: 4px;
+   width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  
+}

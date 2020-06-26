@@ -25,9 +25,9 @@ export default function GestionnaireUsers() {
                 <thead class="">
                     <tr class="">
 
-                        <th class="">firstName</th>
-                        <th class="">plus details</th>
-                        <th class="">configuration</th>
+                        <th class="">Prénom</th>
+                        <th class="">Plus détails</th>
+                        <th class="">Configuration</th>
                       
 
 
