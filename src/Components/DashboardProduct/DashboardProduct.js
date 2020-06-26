@@ -137,34 +137,34 @@ const DashboardProduct = () => {
 
 
       <div className="table-product">
-        <Table celled selectable unstackable>
-          <Table.Header>
-            <Table.Row>
-            <Table.HeaderCell></Table.HeaderCell>
-              <Table.HeaderCell>Nom</Table.HeaderCell>
-              <Table.HeaderCell>Référence</Table.HeaderCell>
-              <Table.HeaderCell>Couleur</Table.HeaderCell>
-              <Table.HeaderCell>Quantité</Table.HeaderCell>
-              <Table.HeaderCell>Phase</Table.HeaderCell>
-              <Table.HeaderCell>Mesure</Table.HeaderCell>
-              <Table.HeaderCell>Marque</Table.HeaderCell>
-              <Table.HeaderCell>Type</Table.HeaderCell>
+      <table class="ui celled table">
+      <thead class="">
+      <tr class="">
+            <th class=""></th>
+              <th class="">Nom</th>
+              <th>Référence</th>
+              <th>Couleur</th>
+              <th>Quantité</th>
+              <th>Phase</th>
+              <th>Mesure</th>
+              <th>Marque</th>
+              <th>Type</th>
               {/* <Table.HeaderCell >prototype ou production</Table.HeaderCell> */}
-              <Table.HeaderCell>Collection</Table.HeaderCell>
-              <Table.HeaderCell>Locallisation</Table.HeaderCell>
-              <Table.HeaderCell>Carton</Table.HeaderCell>
-            </Table.Row>
-            <Table.Row>
-              <Table.HeaderCell>
+              <th>Collection</th>
+              <th>Locallisation</th>
+              <th>Carton</th>
+            </tr>
+            <tr>
+              <th>
                 <button
-                  className="ui button"
+                  className="ui green basic button"
                   name="add Product"
                   onClick={addProduct}
                 >
                    Ajout Article
                 </button>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -173,8 +173,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -183,8 +183,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -193,8 +193,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -203,8 +203,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -213,8 +213,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -223,8 +223,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -233,8 +233,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -243,8 +243,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -253,8 +253,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -263,8 +263,8 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
+              </th>
+              <th>
                 <div class="ui mini icon input">
                   <input
                     type="text"
@@ -273,9 +273,9 @@ const DashboardProduct = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
+              </th>
+            </tr>
+            </thead>
 
           {/* {state.filter === "default"
             ? getProductState.map((el) => <DashboardProductTable data={el} />)
@@ -326,35 +326,21 @@ const DashboardProduct = () => {
               ))
               .reverse()}
 
-          <Table.Footer>
-            <Table.Row>
-              <Table.HeaderCell colSpan="6">
-                <Menu floated="right" pagination>
-                  <Menu.Item as="a" icon>
-                    <Icon name="chevron left" />
-                  </Menu.Item>
-                  <Menu.Item as="a">1</Menu.Item>
-                  <Menu.Item as="a">2</Menu.Item>
-                  <Menu.Item as="a">3</Menu.Item>
-                  <Menu.Item as="a">4</Menu.Item>
-                  <Menu.Item as="a">5</Menu.Item>
-                  <Menu.Item as="a">6</Menu.Item>
-                  <Menu.Item as="a">7</Menu.Item>
-                  <Menu.Item as="a">8</Menu.Item>
-                  <Menu.Item as="a">9</Menu.Item>
-                  <Menu.Item as="a">10</Menu.Item>
-                  <Menu.Item as="a">11</Menu.Item>
-                  <Menu.Item as="a">12</Menu.Item>
-                  <Menu.Item as="a">13</Menu.Item>
-
-                  <Menu.Item as="a" icon>
-                    <Icon name="chevron right" />
-                  </Menu.Item>
-                </Menu>
-              </Table.HeaderCell>
-            </Table.Row>
-          </Table.Footer>
-        </Table>
+<tfoot class="">
+    <tr class="">
+      <th colspan="12" class="">
+        <div class="ui pagination right floated menu">
+          <a class="icon item"><i aria-hidden="true" class="chevron left icon"></i></a>
+          <a class="item">1</a>
+          <a class="item">2</a>
+          <a class="item">3</a>
+          <a class="item">4</a>
+          <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
+        </div>
+      </th>
+    </tr>
+  </tfoot>
+</table>
       </div>
     </div>
   );

@@ -55,14 +55,14 @@ const i=e.target.value
 
   return (
 
-    <Table.Body>
-      <Table.Row>
+    <tbody class="">
+      <tr>
 
 
 
-        <Table.Cell>  <button className='ui button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
+        <td>  <button className='ui red basic button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
 
-          < Modal trigger={< button button className="ui button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
+          < Modal trigger={< button button className="ui blue basic button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
             <h3>Editer Article </h3>
               <br />
@@ -90,37 +90,37 @@ const i=e.target.value
 
 
 
-        </Table.Cell>
+        </td>
 
 
 
 
 
 
-        <Table.Cell warning >
+        <td warning >
           <Label style={{ color: props.colorname }} ribbon>{data.name}</Label>
-        </Table.Cell >
-        <Table.Cell style={{ color: props.colorreference }}>{data.reference}</Table.Cell>
-        <Table.Cell style={{ color: props.colorcolor }}>{data.color}</Table.Cell>
-        <Table.Cell>
+        </td >
+        <td style={{ color: props.colorreference }}>{data.reference}</td>
+        <td style={{ color: props.colorcolor }}>{data.color}</td>
+        <td>
           {data.quantity}
-        </Table.Cell>
-        <Table.Cell>{data.phase}</Table.Cell>
-        <Table.Cell>{data.dimension}</Table.Cell>
+        </td>
+        <td>{data.phase}</td>
+        <td>{data.dimension}</td>
 
-        <Table.Cell>{data.marque}</Table.Cell>
-        <Table.Cell>{data.type}</Table.Cell>
-        <Table.Cell>{data.collection}</Table.Cell>
-        <Table.Cell>{data.locallisation}</Table.Cell>
-        <Table.Cell>{data.carton}</Table.Cell>
-
-
+        <td>{data.marque}</td>
+        <td>{data.type}</td>
+        <td>{data.collection}</td>
+        <td>{data.locallisation}</td>
+        <td>{data.carton}</td>
 
 
 
-      </Table.Row>
 
-    </Table.Body>
+
+      </tr>
+
+      </tbody>
 
   );
 }

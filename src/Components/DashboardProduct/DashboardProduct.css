@@ -1,15 +1,4 @@
 
-input{
-    width:100px;
-}
-.table-product{
-    
-    max-width: 100%;
-        overflow-x: scroll;
-   width:1000px;
-  
-    
-}
 @media only screen and (max-width: 400px) {
     .table-product{
       
@@ -19,4 +8,7 @@ input{
         
     }
     
+}
+.table{
+    background-color: rgba(255, 0, 0, 0.233)!important;
 }

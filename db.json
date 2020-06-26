@@ -39,7 +39,7 @@
       "id": 3
     },
     {
-      "name": "",
+      "name": "kluguio",
       "reference": "",
       "color": "",
       "quantity": null,
@@ -51,20 +51,6 @@
       "locallisation": "",
       "carton": "",
       "id": 4
-    },
-    {
-      "name": "sac1",
-      "reference": "1",
-      "color": "blue",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 5
     },
     {
       "name": "sac2",
@@ -109,14 +95,22 @@
       "id": 3
     },
     {
-      "name": "sac3",
-      "reference": "448",
-      "color": "blue",
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
       "id": 8
     },
     {
-      "name": "sac",
-      "reference": "5",
+      "name": "",
+      "reference": "",
       "color": "",
       "quantity": null,
       "phase": "",
@@ -423,21 +417,54 @@
       "date": "2020-06-26T09:06:48.035Z",
       "nameProduct": "sac",
       "id": 46
+    },
+    {
+      "name": "admin",
+      "nameAction": "delete product",
+      "date": "2020-06-26T17:43:05.692Z",
+      "nameProduct": "sac",
+      "id": 47
+    },
+    {
+      "name": "ta",
+      "nameAction": "delete product",
+      "date": "2020-06-26T17:58:43.822Z",
+      "nameProduct": "sac4",
+      "id": 48
+    },
+    {
+      "name": "ta",
+      "nameAction": "delete product",
+      "date": "2020-06-26T20:15:11.589Z",
+      "nameProduct": "sac1",
+      "id": 49
+    },
+    {
+      "name": "ta",
+      "nameAction": "edit Product",
+      "date": "2020-06-26T20:15:19.037Z",
+      "nameProduct": "kluguio",
+      "id": 50
+    },
+    {
+      "name": "ta",
+      "nameAction": "add Product",
+      "date": "2020-06-26T20:18:06.900Z",
+      "nameProduct": "",
+      "id": 51
+    },
+    {
+      "name": "ta",
+      "nameAction": "add Product",
+      "date": "2020-06-26T20:18:08.482Z",
+      "nameProduct": "",
+      "id": 52
     }
   ],
   "users": [
     {
-      "firstName": "admin",
-      "lastName": "",
-      "email": "takoua@gmail.com",
-      "userName": "",
-      "post": "",
-      "password": "0000",
-      "id": 1
-    },
-    {
       "id": 2,
-      "firstName": "t",
+      "firstName": "ta",
       "password": "000",
       "email": "t@gmail.com",
       "role": "moderateur"
@@ -454,17 +481,15 @@
   ],
   "session": {
     "id": 1,
-    "role": "admin"
+    "role": "moderateur"
   },
   "userData": [
     {
-      "firstName": "admin",
-      "lastName": "",
-      "email": "takoua@gmail.com",
-      "userName": "",
-      "post": "",
-      "password": "0000",
-      "id": 1
+      "id": 1,
+      "firstName": "ta",
+      "password": "000",
+      "email": "t@gmail.com",
+      "role": "moderateur"
     }
   ]
 }

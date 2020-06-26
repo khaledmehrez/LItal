@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { Component, useState, useEffect } from "react";
 import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { Checkbox } from 'semantic-ui-react'
+
 
 import { Route, Switch, Link } from 'react-router-dom';
 import DashboardProduct from '../DashboardProduct/DashboardProduct';
@@ -9,17 +11,33 @@ import GestionnaireUsers from '../users/gestionnaireUsers'
 import "./Sidebar.css"
 import Test from '../DashboardProduct/Test';
 const SidebarExampleVisible = () => {
-  
+  const [state, setState] = useState({togle:false})
+
+  function togleclick(){
+    if(state.togle===false)
+    setState({
+      ...state,
+      togle: true,
+    });
+    else {
+      setState({
+        ...state,
+        togle: false,
+      });
+    }
+  }
   return (
   <Sidebar.Pushable as={Segment} >
+    <Checkbox toggle onClick={togleclick} />
     <Sidebar
-    className="ui container"
+    
+    className="ui container sidebar"
       as={Menu}
       animation='push'
       icon='labeled'
      
       vertical
-      visible
+     visible={state.togle}
       width='thin'
       
       
