@@ -60,9 +60,9 @@ const i=e.target.value
 
 
 
-        <td>  <button className='ui red basic button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
+        <td>  <button className='ui red basic button btn-trash'name="delete product" value={data.id} onClick={deleteProduct}>X</button>
 
-          < Modal trigger={< button button className="ui blue basic button btn-sign" ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
+          < Modal trigger={< button button className="ui blue basic button  btn-trash " ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
             <h3>Editer Article </h3>
               <br />
@@ -97,8 +97,8 @@ const i=e.target.value
 
 
 
-        <td warning >
-          <Label style={{ color: props.colorname }} ribbon>{data.name}</Label>
+        <td  >
+          <Label style={{ color: "white", backgroundColor:"#695548"}} ribbon>{data.name}</Label>
         </td >
         <td style={{ color: props.colorreference }}>{data.reference}</td>
         <td style={{ color: props.colorcolor }}>{data.color}</td>

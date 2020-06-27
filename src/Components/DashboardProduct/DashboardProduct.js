@@ -86,7 +86,7 @@ const DashboardProduct = () => {
   }
   console.log(state)
   return (
-    <div className="ui container">
+    <div className="">
       <Filter handlechangefilter={handlechangefilter} />
       {/* {state.filter != "default" && state.filter != "new" ? (
         <div class="ui input">
@@ -139,29 +139,29 @@ const DashboardProduct = () => {
       <div className="table-product">
       <table class="ui celled table">
       <thead class="">
-      <tr class="">
+      <tr>
             <th class=""></th>
-              <th class="">Nom</th>
-              <th>Référence</th>
-              <th>Couleur</th>
-              <th>Quantité</th>
-              <th>Phase</th>
-              <th>Mesure</th>
-              <th>Marque</th>
-              <th>Type</th>
-              {/* <Table.HeaderCell >prototype ou production</Table.HeaderCell> */}
-              <th>Collection</th>
-              <th>Locallisation</th>
-              <th>Carton</th>
+              <th  class="header-array">Nom</th>
+              <th  class="header-array">Référence</th>
+              <th  class="header-array">Couleur</th>
+              <th class="header-array">Quantité</th>
+              <th class="header-array">Phase</th>
+              <th class="header-array">Mesure</th>
+              <th class="header-array">Marque</th>
+              <th class="header-array">Type</th>
+             
+              <th  class="header-array">Collection</th>
+              <th class="header-array">Locallisation</th>
+              <th class="header-array">Carton</th>
             </tr>
             <tr>
               <th>
                 <button
-                  className="ui green basic button"
+                  className="ajout-product  green basic button"
                   name="add Product"
                   onClick={addProduct}
                 >
-                   Ajout Article
+                  <p>Ajout </p> 
                 </button>
               </th>
               <th>
@@ -340,6 +340,7 @@ const DashboardProduct = () => {
       </th>
     </tr>
   </tfoot>
+
 </table>
       </div>
     </div>

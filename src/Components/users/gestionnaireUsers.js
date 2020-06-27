@@ -28,12 +28,11 @@ export default function GestionnaireUsers() {
                         <th class="">Prénom</th>
                         <th class="">Plus détails</th>
                         <th class="">Configuration</th>
-                      
 
 
 
 
-                        <th class=""> </th>
+
 
                     </tr>
                 </thead>
@@ -43,23 +42,22 @@ export default function GestionnaireUsers() {
 
 
                 </tbody>
-                <tfoot class="">
-                    <tr class="">
-                        <th colspan="4" class="">
-                            <div class="ui pagination right floated menu">
-                                <a class="icon item"><i aria-hidden="true" class="chevron left icon"></i></a>
-                                <a class="item">1</a>
-                                <a class="item">2</a>
-                                <a class="item">3</a>
-                                <a class="item">4</a>
-
-
-                                <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
-                            </div>
-                        </th>
-                    </tr>
-                </tfoot>
-
+                <center>
+                    <tfoot class="">
+                        <tr class="">
+                            <th colspan="4" class="">
+                                <div class="ui pagination right floated menu">
+                                    <a class="icon item"><i aria-hidden="true" class="chevron left icon"></i></a>
+                                    <a class="item">1</a>
+                                    <a class="item">2</a>
+                                    <a class="item">3</a>
+                                    <a class="item">4</a>
+                                    <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
+                                </div>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </center>
             </table>
 
 

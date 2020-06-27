@@ -4,6 +4,17 @@
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px !important;
+
+
+background-color: rgb(245, 245, 245,0.4);
+}
+.backround-sign-page{
+
+   height: 939px ;
+   background-repeat: no-repeat;
+
+    background-image: url(../communComponets/img/litalBac.png);   
 }
 .img_login_page {
     margin-top: 30px;
@@ -14,25 +25,16 @@
     width: 30%;
     height: 90px;
 }
-.login_button{
-    width: 120px;
-    height: 20px;
-    color : white;
-    border: none;
-background: #857874;
-color: #ffffff !important;
-/*font-weight: 100;*/
-padding: 20px;
+.login-button-page{
 
-border-radius: 6px;
-display: inline-block;
-transition: all 0.3s ease 0s;
-text-align: center;
-margin-top: 20px;
-margin-left: 300px;
+background-color: transparent;
+border-radius: 5px;
 
 }
-
+.con-log-btn{
+    margin-top: 70px;
+    float: right;
+}
 .loginLabel{
     font-weight: 80;
     padding: 20px;
@@ -44,8 +46,11 @@ label .loginLabelRember{
     color: #857874 ;
   
 }
+.Bienvenue{
+    color: whitesmoke;
+}
 .input_login {
-    margin-top: 30px !important;
+
     border: none !important;
    border-bottom:#857874 solid 2px !important; 
    padding: 8px 10px!important;
@@ -55,6 +60,11 @@ label .loginLabelRember{
    height: 25px !important;
    width: 90%!important;
    margin-bottom: 40px !important;  
+   background-color: rgb(255, 255, 255,0.8)!important;  
+ 
 
   
+ }
+ .form{
+     padding-top: 180px !important;
  }
