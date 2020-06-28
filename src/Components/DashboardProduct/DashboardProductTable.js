@@ -17,15 +17,16 @@ const DashboardProductTable = (props) => {
   }, [dispatch]);
   //role of user
   const name = { ...getUserDataState[0] }.firstName;
+  const role = { ...getUserDataState[0] }.role;
   console.log(name)
   //delete product
   function deleteProduct(e) {
 const i=e.target.value
     dispatch(deleteProductFromApi(i))
     const nameAction = e.target.name;
-    const date = new Date();
+    const date = new Date().toLocaleString();
     const nameProduct = state.name;
-    const objHistory = { name, nameAction, date, nameProduct };
+    const objHistory = { name,role, nameAction, date, nameProduct };
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
 
@@ -46,9 +47,9 @@ const i=e.target.value
 const i=e.target.value
     dispatch(patchProductToApi(i, state.name, state.reference, state.color, state.quantity, state.phase, state.dimension, state.marque, state.type, state.collection, state.locallisation, state.carton))
     const nameAction = e.target.name;
-    const date = new Date();
+    const date = new Date().toLocaleString();
     const nameProduct = state.name;
-    const objHistory = { name, nameAction, date, nameProduct };
+    const objHistory = { name,role, nameAction, date, nameProduct };
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
@@ -98,7 +99,7 @@ const i=e.target.value
 
 
         <td  >
-          <Label style={{ color: "white", backgroundColor:"#695548"}} ribbon>{data.name}</Label>
+          <Label style={{ color: props.colorname, backgroundColor:"#695548"}} ribbon>{data.name}</Label>
         </td >
         <td style={{ color: props.colorreference }}>{data.reference}</td>
         <td style={{ color: props.colorcolor }}>{data.color}</td>
@@ -108,7 +109,7 @@ const i=e.target.value
         <td>{data.phase}</td>
         <td>{data.dimension}</td>
 
-        <td>{data.marque}</td>
+        <td style={{ color: props.colormarque }}>{data.marque}</td>
         <td>{data.type}</td>
         <td>{data.collection}</td>
         <td>{data.locallisation}</td>

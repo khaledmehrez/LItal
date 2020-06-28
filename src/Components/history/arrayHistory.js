@@ -6,7 +6,7 @@ const ArrayHistory = (props) => {
 
         <tr>
 
-            <td class="">{dataHistory.name}</td>
+            <td class="">{`${dataHistory.name}: ${dataHistory.role}`}</td>
             <td class="">{dataHistory.date}</td>
             <td class="">{dataHistory.nameAction}</td>
             <td class="">{dataHistory.nameProduct}</td>

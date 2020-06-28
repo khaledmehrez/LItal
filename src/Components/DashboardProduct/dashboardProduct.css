@@ -13,3 +13,10 @@
     
 }
   
+.filter-input{
+  display:flex;
+  justify-content: space-evenly;
+  margin-bottom:5%;
+  margin-top:2%;
+  margin-right:10%;
+}

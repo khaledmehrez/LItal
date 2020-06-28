@@ -10,7 +10,7 @@ import History from '../history/history'
 import GestionnaireUsers from '../users/gestionnaireUsers'
 import "./Sidebar.css"
 import Test from '../DashboardProduct/Test';
-const SidebarExampleVisible = () => {
+const SidebarExampleVisible = (props) => {
   const [state, setState] = useState({togle:false})
 
   function togleclick(){
@@ -47,10 +47,10 @@ const SidebarExampleVisible = () => {
       <Icon name='chart bar' />
         Gestionnaire de Stock
       </Menu.Item>
-      <Menu.Item as={Link} to="/gestionnaireUsers">
+      {props.sessionState==="admin"?<Menu.Item as={Link} to="/gestionnaireUsers">
       <Icon name='users' />
         Gestionnaire des utilisateurs 
-      </Menu.Item>
+      </Menu.Item>:null}
       <Menu.Item as={Link} to="/history">
       <Icon name='history' />
         Historique

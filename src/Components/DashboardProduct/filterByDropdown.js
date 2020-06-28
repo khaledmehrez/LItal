@@ -7,15 +7,16 @@ const countryOptions = [
   
 ]
 
-const filterByDate = (props) => (
+const filterByDropdown = (props) => (
   <Dropdown
   className= "ui segment"
     placeholder='Select Country'
     onChange={props.handlechangeDate}
     search
     selection
+    name={props.InputName}
     options={countryOptions}
   />
 )
 
-export default filterByDate
+export default filterByDropdown;
