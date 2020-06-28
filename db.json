@@ -609,15 +609,15 @@
   ],
   "session": {
     "id": 1,
-    "role": "moderateur"
+    "role": "admin"
   },
   "userData": [
     {
       "id": 1,
-      "firstName": "khaled",
-      "password": "000",
-      "email": "t@gmail.com",
-      "role": "moderateur"
+      "firstName": "admin",
+      "password": "0000",
+      "email": "takoua@gmail.com",
+      "role": "admin"
     }
   ]
 }

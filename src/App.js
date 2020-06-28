@@ -13,6 +13,7 @@ import DashboardManagement from "./Components/DashboardProduct/DashboardProduct"
 
 import SignIn from "./Components/users/signIn"
 import {getUserSession  } from './api/ApiUsers';
+import LoaderExampleLoader from './Components/communComponets/Loder';
 
 const App = () => {
   const sessionState = useSelector((state) => state.sessionState)
@@ -28,12 +29,14 @@ console.log(sessionState.role)
 
   
 
-    
-     if  (sessionState.role==="admin" ||sessionState.role==="moderateur"){
+if(sessionState.role===undefined){
+  return <LoaderExampleLoader />
+}
+     else if  (sessionState.role==="admin" ||sessionState.role==="moderateur"){
        return(
      <div className="App">
       <Navbar />
-      <Sidebar />
+      <Sidebar sessionState={sessionState.role}/>
       </div>)}
       else
       return(<SignIn />)
