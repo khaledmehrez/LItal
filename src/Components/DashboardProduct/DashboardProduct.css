@@ -12,7 +12,7 @@
 .table{
    
     table-layout: fixed !important;
-    width: 1120px !important;
+    width: 1420px !important;
 
     background-color: #f2eae3 !important;
 }
@@ -41,7 +41,3 @@ width: 75px;
     background-color: transparent;
    border: green solid 2px ;
 }
-.header-array{
-    background-color: #695548 !important;
-    color:whitesmoke!important;
-  }

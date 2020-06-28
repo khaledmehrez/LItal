@@ -34,8 +34,8 @@ const DashboardProduct = () => {
     filterQuantity: "",
     filterMarque: "",
     filterCarton: "",
-    filterPhase:"",
-    SearchPhase:"",
+    filterPhase: "",
+    SearchPhase: "",
     SearchCarton: "",
     SearchMarque: "",
     SearchName: "",
@@ -125,7 +125,7 @@ const DashboardProduct = () => {
 
 
   //search from dropdown
-  function handlechangeDropdownFilter (event,val){
+  function handlechangeDropdownFilter(event, val) {
     if (val.name === "phase") {
       setState((prevState) => ({ ...prevState, filterPhase: val.name }));
       setState((prevState) => ({ ...prevState, SearchPhase: val.value }));
@@ -160,45 +160,46 @@ const DashboardProduct = () => {
           />
         </div>
       ) : null} */}
-    <div className="filter-input">
-      <FilterByInput
-        Inputname={"name"}
-        handlechangefilter={handlechangefilter}
-        colorDefault={colorDefault}
-      />
-      <FilterByInput
-        Inputname={"reference"}
-        handlechangefilter={handlechangefilter}
-        colorDefault={colorDefault}
-      />
-      <FilterByInput
-        Inputname={"marque"}
-        handlechangefilter={handlechangefilter}
-        colorDefault={colorDefault}
-      />
-      </div>
-      <FilterBySlide
-        handlechangefilter={handlechangefilter}
-        Inputname={"quantity"}
-        getProductState={getProductState}
-        attribut={"quantity"}
-      />
-      <FilterBySlide
-        handlechangefilter={handlechangefilter}
-        Inputname={"carton"}
-        getProductState={getProductState}
-        attribut={"carton"}
-      />
-      
-      <Filter
-        dataOptions={[
-          { key: "1", value: "production", text: "Production" },
-          { key: "2", value: "prototype", text: "Prototype" },
-        ]}
-        Inputname={"phase"}
-        handlechangeDropdownFilter={handlechangeDropdownFilter}
-      />
+      <div>
+        <div className="filter-input">
+          <FilterByInput
+            Inputname={"name"}
+            handlechangefilter={handlechangefilter}
+            colorDefault={colorDefault}
+          />
+          <FilterByInput
+            Inputname={"reference"}
+            handlechangefilter={handlechangefilter}
+            colorDefault={colorDefault}
+          />
+          <FilterByInput
+            Inputname={"marque"}
+            handlechangefilter={handlechangefilter}
+            colorDefault={colorDefault}
+          />
+        </div>
+        <FilterBySlide
+          handlechangefilter={handlechangefilter}
+          Inputname={"quantity"}
+          getProductState={getProductState}
+          attribut={"quantity"}
+        />
+        <FilterBySlide
+          handlechangefilter={handlechangefilter}
+          Inputname={"carton"}
+          getProductState={getProductState}
+          attribut={"carton"}
+        />
 
+        <Filter
+          dataOptions={[
+            { key: "1", value: "production", text: "Production" },
+            { key: "2", value: "prototype", text: "Prototype" },
+          ]}
+          Inputname={"phase"}
+          handlechangeDropdownFilter={handlechangeDropdownFilter}
+        />
+      </div>
       <div className="table-product">
         <table class="ui celled table">
           <thead class="">
@@ -216,6 +217,8 @@ const DashboardProduct = () => {
               <th class="header-array">Collection</th>
               <th class="header-array">Locallisation</th>
               <th class="header-array">Carton</th>
+              <th class="header-array">image</th>
+              <th class="header-array">commentaire</th>
             </tr>
             <tr>
               <th>
@@ -231,7 +234,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="name..."
                     name="name"
                     onChange={handleChange}
                   />
@@ -241,7 +244,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="reference..."
                     name="reference"
                     onChange={handleChange}
                   />
@@ -251,7 +254,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="color..."
                     name="color"
                     onChange={handleChange}
                   />
@@ -261,7 +264,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="quantite..."
                     name="quantity"
                     onChange={handleChange}
                   />
@@ -271,7 +274,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="phase..."
                     name="phase"
                     onChange={handleChange}
                   />
@@ -281,7 +284,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="dimension..."
                     name="dimension"
                     onChange={handleChange}
                   />
@@ -291,7 +294,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="marque..."
                     name="marque"
                     onChange={handleChange}
                   />
@@ -301,7 +304,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="type..."
                     name="type"
                     onChange={handleChange}
                   />
@@ -311,7 +314,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="collection..."
                     name="collection"
                     onChange={handleChange}
                   />
@@ -321,7 +324,7 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="locallisation..."
                     name="locallisation"
                     onChange={handleChange}
                   />
@@ -331,12 +334,35 @@ const DashboardProduct = () => {
                 <div class="ui mini icon input">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="carton..."
                     name="carton"
                     onChange={handleChange}
                   />
                 </div>
               </th>
+              <th>
+                <div class="ui mini icon input">
+                  <input
+                    type="text"
+                    placeholder="image..."
+                    name="image"
+                    onChange={handleChange}
+                  />
+                </div>
+              </th>
+              <th>
+                <div class="ui mini icon input">
+                  <input
+                    type="text"
+                    placeholder="commentaire..."
+                    name="commentaire"
+                    onChange={handleChange}
+                  />
+                </div>
+              </th>
+             
+            
+            
             </tr>
           </thead>
 
@@ -375,70 +401,76 @@ const DashboardProduct = () => {
                 ))
                 .reverse()
             : null} */}
-          {getProductState
-            .filter(
-              state.filterName === "name" && state.SearchName !== ""
-                ? (el) => el.name.includes(state.SearchName)
-                : (el) => el
-            )
-            .filter(
-              state.filterMarque === "marque" && state.SearchMarque !== ""
-                ? (el) => el.marque.includes(state.SearchMarque)
-                : (el) => el
-            )
-            .filter(
-              state.filterReference === "reference" &&
-                state.SearchReference !== ""
-                ? (el) => el.reference === state.SearchReference
-                : (el) => el
-            )
-            .filter(
-              state.filterQuantity === "quantity" && state.SearchQuantity !== ""
-                ? (el) => el.quantity === state.SearchQuantity
-                : (el) => el
-            )
-            .filter(
-              state.filterCarton === "carton" && state.SearchCarton !== ""
-                ? (el) => el.carton === state.SearchCarton
-                : (el) => el
-            ).filter(
-              state.filterPhase === "phase" && state.SearchPhase !== ""
-                ? (el) => el.phase === state.SearchPhase
-                : (el) => el
-            )
-            .map((el) => (
-              <DashboardProductTable
-                colorreference={
-                  state.filterReference === "reference" ? "red" : "black"
-                }
-                colorname={state.filterName === "name" ? "yellow" : "white"}
-                colormarque={state.filterMarque === "marque" ? "red" : "black"}
-                data={el}
-              />
-            ))
-            .reverse()}
+  {
+    getProductState
+      .filter(
+        state.filterName === "name" && state.SearchName !== ""
+          ? (el) => el.name.includes(state.SearchName)
+          : (el) => el
+      )
+    .filter(
+      state.filterMarque === "marque" && state.SearchMarque !== ""
+        ? (el) => el.marque.includes(state.SearchMarque)
+        : (el) => el
+    )
+    .filter(
+      state.filterReference === "reference" &&
+        state.SearchReference !== ""
+        ? (el) => el.reference === state.SearchReference
+        : (el) => el
+    )
+    .filter(
+      state.filterQuantity === "quantity" && state.SearchQuantity !== ""
+        ? (el) => el.quantity === state.SearchQuantity
+        : (el) => el
+    )
+    .filter(
+      state.filterCarton === "carton" && state.SearchCarton !== ""
+        ? (el) => el.carton === state.SearchCarton
+        : (el) => el
+    ).filter(
+      state.filterPhase === "phase" && state.SearchPhase !== ""
+        ? (el) => el.phase === state.SearchPhase
+        : (el) => el
+    )
+    .map((el) => (
+      <DashboardProductTable
+        colorreference={
+          state.filterReference === "reference" ? "red" : "black"
+        }
+        colorname={state.filterName === "name" ? "yellow" : "white"}
+        colormarque={state.filterMarque === "marque" ? "red" : "black"}
+        data={el}
+      />
+    ))
+    .reverse()
+  }
 
-          <tfoot class="">
-            <tr class="">
-              <th colspan="12" class="">
-                <div class="ui pagination right floated menu">
-                  <a class="icon item">
-                    <i aria-hidden="true" class="chevron left icon"></i>
-                  </a>
-                  <a class="item">1</a>
-                  <a class="item">2</a>
-                  <a class="item">3</a>
-                  <a class="item">4</a>
-                  <a class="icon item">
-                    <i aria-hidden="true" class="chevron right icon"></i>
-                  </a>
-                </div>
-              </th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </div>
+
+        </table >
+
+  <center>
+    <tfoot class="">
+      <tr class="">
+        <th colspan="12" class="">
+          <div class="ui pagination right floated menu">
+            <a class="icon item">
+              <i aria-hidden="true" class="chevron left icon"></i>
+            </a>
+            <a class="item">1</a>
+            <a class="item">2</a>
+            <a class="item">3</a>
+            <a class="item">4</a>
+            <a class="icon item">
+              <i aria-hidden="true" class="chevron right icon"></i>
+            </a>
+          </div>
+        </th>
+      </tr>
+    </tfoot>
+  </center>
+      </div >
+    </div >
   );
 };
 

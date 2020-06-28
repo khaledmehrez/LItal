@@ -25,9 +25,9 @@ export default function GestionnaireUsers() {
                 <thead class="">
                     <tr class="">
 
-                        <th class="">Prénom</th>
-                        <th class="">Plus détails</th>
-                        <th class="">Configuration</th>
+                        <th class="header-array"><center>Prénom</center></th>
+                        <th class="header-array"><center>Plus détails</center></th>
+                        <th class="header-array"><center>Configuration</center></th>
 
 
 
@@ -42,24 +42,25 @@ export default function GestionnaireUsers() {
 
 
                 </tbody>
-                <center>
-                    <tfoot class="">
-                        <tr class="">
-                            <th colspan="4" class="">
-                                <div class="ui pagination right floated menu">
-                                    <a class="icon item"><i aria-hidden="true" class="chevron left icon"></i></a>
-                                    <a class="item">1</a>
-                                    <a class="item">2</a>
-                                    <a class="item">3</a>
-                                    <a class="item">4</a>
-                                    <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
-                                </div>
-                            </th>
-                        </tr>
-                    </tfoot>
-                </center>
-            </table>
+                <br />      <br />
 
+            </table>
+            <center>
+                <tfoot class="">
+                    <tr class="">
+                        <th colspan="4" class="">
+                            <div class="ui pagination right floated menu">
+                                <a class="icon item"><i aria-hidden="true" class="chevron left icon"></i></a>
+                                <a class="item">1</a>
+                                <a class="item">2</a>
+                                <a class="item">3</a>
+                                <a class="item">4</a>
+                                <a class="icon item"><i aria-hidden="true" class="chevron right icon"></i></a>
+                            </div>
+                        </th>
+                    </tr>
+                </tfoot>
+            </center>
 
         </div>
     )
