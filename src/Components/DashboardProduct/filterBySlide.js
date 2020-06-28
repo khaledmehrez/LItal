@@ -20,13 +20,13 @@ const FilterBySlide=(props)=>{
     const max=Math.max(...Tab)
     
 return(
-    <form class="ui form">
+
     <div className="field">
        <label for="myRange">{`${Inputname}: ${slide.rage}`}</label>
         
     <input type="range" min="1" max={max}  class="slider" id="myRange" name={Inputname} onChange={(e)=>{handleChangeSlide(e);props.handlechangefilter(e)}}/>
   </div>
-  </form>
+
 )
 
 }

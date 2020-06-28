@@ -20,10 +20,10 @@ const History = () => {
                 <thead class="">
                     <tr class="">
 
-                        <th class="">Modérateur</th>
-                        <th class="">Date</th>
-                        <th class="">OPeration</th>
-                        <th class="">Réference</th>
+                        <th class="header-array">Modérateur</th>
+                        <th class="header-array">Date</th>
+                        <th class="header-array">OPeration</th>
+                        <th class="header-array">Réference</th>
                     </tr>
                 </thead>
                 <tbody class="">
@@ -32,6 +32,10 @@ const History = () => {
 
 
                 </tbody>
+
+
+            </table>
+            <center>
                 <tfoot class="">
                     <tr class="">
                         <th colspan="4" class="">
@@ -46,9 +50,7 @@ const History = () => {
                         </th>
                     </tr>
                 </tfoot>
-
-            </table>
-
+            </center>
         </div>
     )
 

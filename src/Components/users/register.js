@@ -28,8 +28,8 @@ function Register() {
   return (
     <Modal
       trigger={
-        <button button className="add_user_button">
-        <i aria-hidden="true" class="user plus"></i>Ajouter Modérateur{" "}
+        <button button style={{height:'55px'}} className="ajout-product  green basic button">
+        <i aria-hidden="true"  class="user plus icon"></i>
         </button>
       }
       closeIcon

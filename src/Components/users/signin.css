@@ -1,9 +1,10 @@
 .pageLogin {
     box-shadow: 8px 8px 10px rgb(236, 230, 230);
-    width:450px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    width:550px;
+    height: 400px;
+    margin :0 auto;
+    display: block;
+
     padding: 20px !important;
 
 
@@ -11,9 +12,11 @@ background-color: rgb(245, 245, 245,0.4);
 }
 .backround-sign-page{
 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
    height: 100vh ;
-   background-repeat: cover;
-   
 
     background-image: url(../communComponets/img/litalBac.png);   
 }
@@ -32,8 +35,14 @@ background-color: transparent;
 border-radius: 5px;
 
 }
+.con-log-btn :hover{
+
+    background-color: green;
+  
+    
+    }
 .con-log-btn{
-    margin-top: 70px;
+    margin-top: 100px;
     float: right;
 }
 .loginLabel{
@@ -60,12 +69,14 @@ label .loginLabelRember{
    float: left !important;
    height: 25px !important;
    width: 90%!important;
-   margin-bottom: 40px !important;  
+   margin-bottom: 50px !important;  
    background-color: rgb(255, 255, 255,0.8)!important;  
  
 
   
  }
  .form{
-     padding-top: 180px !important;
+    margin :0 auto;
+    display: block; 
+top: 200px;
  }
