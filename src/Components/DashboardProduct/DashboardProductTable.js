@@ -53,7 +53,7 @@ const DashboardProductTable = (props) => {
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
-
+console.log(data.image)
   return (
 
     <tbody class="">
@@ -110,16 +110,16 @@ const DashboardProductTable = (props) => {
         <td style={{ color: props.colorquantity }}>
           {data.quantity}
         </td>
-        <td>{data.phase}</td>
+        <td >{data.phase}</td>
         <td>{data.dimension}</td>
 
         <td style={{ color: props.colormarque }}>{data.marque}</td>
-        <td>{data.type}</td>
+        <td style={{ color: props.colortype }}>{data.type}</td>
         <td>{data.collection}</td>
         <td>{data.locallisation}</td>
         <td style={{ color: props.colorcarton }}>{data.carton}</td>
 
-        <td>{data.image}</td>
+        <td><img src={"ff"}/></td>
 
         <td>{data.commentaire}</td>
 

@@ -28,7 +28,7 @@ const DashboardProduct = () => {
     collection: "",
     locallisation: "",
     carton: "",
-    selectedFile: null,
+    image: null,
     filterName: "",
     filterColor: "",
     filterReference: "",
@@ -36,6 +36,8 @@ const DashboardProduct = () => {
     filterMarque: "",
     filterCarton: "",
     filterPhase: "",
+    filterType:"",
+    SearchType:"",
     SearchPhase: "",
     SearchCarton: "",
     SearchMarque: "",
@@ -90,6 +92,10 @@ const DashboardProduct = () => {
       setState((prevState) => ({ ...prevState, filterCarton: n }));
       setState((prevState) => ({ ...prevState, SearchCarton: data }));
     }
+    if (e.target.name === "type") {
+      setState((prevState) => ({ ...prevState, filterType: n }));
+      setState((prevState) => ({ ...prevState, SearchType: data }));
+    }
     //   if(data.value==="color")
     //   setState((prevState) => ({ ...prevState, filterColor: data.value }));
     //   if(data.value==="reference")
@@ -115,6 +121,10 @@ const DashboardProduct = () => {
         setState((prevState) => ({ ...prevState, filterMarque: "" }));
         setState((prevState) => ({ ...prevState, SearchMarque: "" }));
       }
+      if (e.target.name === "type") {
+        setState((prevState) => ({ ...prevState, filterType: "" }));
+        setState((prevState) => ({ ...prevState, SearchType: "" }));
+      }
     }
   }
 
@@ -131,7 +141,10 @@ const DashboardProduct = () => {
       setState((prevState) => ({ ...prevState, filterPhase: val.name }));
       setState((prevState) => ({ ...prevState, SearchPhase: val.value }));
     }
-    console.log(state)
+    if (val.name === "color") {
+      setState((prevState) => ({ ...prevState, filterColor: val.name }));
+      setState((prevState) => ({ ...prevState, SearchColor: val.value }));
+    }
   }
 
   // role of user
@@ -139,15 +152,18 @@ const DashboardProduct = () => {
   const role = { ...getUserDataState[0] }.role;
   // add product
   function addProduct(e) {
+    
+  
     dispatch(PostProductAPi(state));
     const nameAction = "add Product";
-
+    
     const date = new Date().toLocaleString();
     const nameProduct = state.name;
     const objHistory = { name, role, nameAction, date, nameProduct };
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
+  //reset slide
   function resetSlide(e){
     if (e.target.name === "quantity") {
       
@@ -160,10 +176,16 @@ const DashboardProduct = () => {
     }
   }
   //upload picture
-  // function fileChangedHandler  (event)  {
-  //   const file = event.target.files[0]
-  //   setState((prevState) => ({ ...prevState, selectedFile: file}));
-  // }
+  
+    function onImageChange(event) {
+      console.log("5")
+     
+    
+    }
+      
+    
+  ;
+  
   
   
   return (
@@ -195,6 +217,11 @@ const DashboardProduct = () => {
             handlechangefilter={handlechangefilter}
             colorDefault={colorDefault}
           />
+          <FilterByInput
+            Inputname={"type"}
+            handlechangefilter={handlechangefilter}
+            colorDefault={colorDefault}
+          />
         </div>
         <FilterBySlide
           handlechangefilter={handlechangefilter}
@@ -219,6 +246,23 @@ const DashboardProduct = () => {
           Inputname={"phase"}
           handlechangeDropdownFilter={handlechangeDropdownFilter}
         />
+
+        <Filter
+          dataOptions={[
+            { key: "1", value: "blue", text: "blue" },
+            { key: "2", value: "red", text: "red" },
+            { key: "3", value: "black", text: "black" },
+            { key: "4", value: "grey", text: "grey" },
+            { key: "5", value: "white", text: "white" },
+            { key: "6", value: "orange", text: "orange" },
+            { key: "7", value: "purple", text: "purple" },
+            { key: "8", value: "pink", text: "pink" },
+            { key: "9", value: "tan", text: "tan" },
+          ]}
+          Inputname={"color"}
+          handlechangeDropdownFilter={handlechangeDropdownFilter}
+        />
+        
         
       </div>
       <div className="table-product">
@@ -362,7 +406,7 @@ const DashboardProduct = () => {
                 </div>
               </th>
               <th>
-              <input className="btnSubmit"  type="file" />
+              <input className="btnSubmit"  type="file" onChange={ onImageChange} />
 
               </th>
               <th>
@@ -447,6 +491,14 @@ const DashboardProduct = () => {
       state.filterPhase === "phase" && state.SearchPhase !== ""
         ? (el) => el.phase === state.SearchPhase
         : (el) => el
+    ).filter(
+      state.filterColor === "color" && state.SearchColor !== ""
+        ? (el) => el.color.includes( state.SearchColor)
+        : (el) => el
+    ).filter(
+      state.filterType === "type" && state.SearchType !== ""
+        ? (el) => el.type.includes(state.SearchType)
+        : (el) => el
     )
     .map((el) => (
       <DashboardProductTable
@@ -457,7 +509,10 @@ const DashboardProduct = () => {
         colormarque={state.filterMarque === "marque" ? "red" : "black"}
         colorquantity={state.filterQuantity==="quantity"?"red":"black"}
         colorcarton={state.filterCarton==="carton"?"red":"black"}
+        colorphase={state.filterPhase==="phase"?"red":"black"}
+        colortype={state.filterType==="type"?"red":"black"}
         data={el}
+        
       />
     ))
     .reverse()

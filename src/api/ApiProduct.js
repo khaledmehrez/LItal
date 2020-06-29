@@ -25,7 +25,7 @@ export function PostProductAPi(data) {
       collection: data.collection,
       locallisation: data.locallisation,
       carton: data.carton,
-      image: data.selectedFile,
+      image:data.image,
       commentaire: data.commentaire,
       
     });
