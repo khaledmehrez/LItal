@@ -58,6 +58,7 @@ const SidebarExampleVisible = (props) => {
     </Sidebar>
 
     <Sidebar.Pusher >
+      <div className="segment">
       <Segment basic>
 
         <Switch>
@@ -67,6 +68,7 @@ const SidebarExampleVisible = (props) => {
           <Route path='/gestionnaireUsers' component={GestionnaireUsers} />
         </Switch>
       </Segment>
+      </div>
     </Sidebar.Pusher>
   </Sidebar.Pushable>
   

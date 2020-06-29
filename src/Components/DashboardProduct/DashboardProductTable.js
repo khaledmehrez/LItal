@@ -107,7 +107,7 @@ const DashboardProductTable = (props) => {
         </td >
         <td style={{ color: props.colorreference }}>{data.reference}</td>
         <td style={{ color: props.colorcolor }}>{data.color}</td>
-        <td>
+        <td style={{ color: props.colorquantity }}>
           {data.quantity}
         </td>
         <td>{data.phase}</td>
@@ -117,7 +117,7 @@ const DashboardProductTable = (props) => {
         <td>{data.type}</td>
         <td>{data.collection}</td>
         <td>{data.locallisation}</td>
-        <td>{data.carton}</td>
+        <td style={{ color: props.colorcarton }}>{data.carton}</td>
 
         <td>{data.image}</td>
 

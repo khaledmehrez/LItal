@@ -15,6 +15,9 @@
     width: 1420px !important;
 
     background-color: #f2eae3 !important;
+    zoom: 78%;
+    
+    font-size: 20px !important;
 }
 .btn-trash{
   width: 15px;  
@@ -26,7 +29,8 @@ body{
 .table-product{
       
 
-    table-layout:fixed
+    table-layout:fixed;
+    overflow: scroll;
 
      
  }
@@ -40,4 +44,7 @@ width: 75px;
     font-family: 0.4em;
     background-color: transparent;
    border: green solid 2px ;
+}
+.btnSubmit{
+    width:80px;
 }

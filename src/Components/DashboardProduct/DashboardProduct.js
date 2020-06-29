@@ -28,6 +28,7 @@ const DashboardProduct = () => {
     collection: "",
     locallisation: "",
     carton: "",
+    selectedFile: null,
     filterName: "",
     filterColor: "",
     filterReference: "",
@@ -147,7 +148,24 @@ const DashboardProduct = () => {
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
-  console.log(state);
+  function resetSlide(e){
+    if (e.target.name === "quantity") {
+      
+      setState((prevState) => ({ ...prevState, filterQuantity: "" }));
+      setState((prevState) => ({ ...prevState, SearchQuantity: "" }));
+    }
+    if (e.target.name === "carton") {
+      setState((prevState) => ({ ...prevState, filterCarton: "" }));
+      setState((prevState) => ({ ...prevState, SearchCarton: "" }));
+    }
+  }
+  //upload picture
+  // function fileChangedHandler  (event)  {
+  //   const file = event.target.files[0]
+  //   setState((prevState) => ({ ...prevState, selectedFile: file}));
+  // }
+  
+  
   return (
     <div className="">
       {/* <Filter handlechangefilter={handlechangefilter} />*/}
@@ -183,12 +201,14 @@ const DashboardProduct = () => {
           Inputname={"quantity"}
           getProductState={getProductState}
           attribut={"quantity"}
+          resetSlide={resetSlide}
         />
         <FilterBySlide
           handlechangefilter={handlechangefilter}
           Inputname={"carton"}
           getProductState={getProductState}
           attribut={"carton"}
+          resetSlide={resetSlide}
         />
 
         <Filter
@@ -199,6 +219,7 @@ const DashboardProduct = () => {
           Inputname={"phase"}
           handlechangeDropdownFilter={handlechangeDropdownFilter}
         />
+        
       </div>
       <div className="table-product">
         <table class="ui celled table">
@@ -341,14 +362,8 @@ const DashboardProduct = () => {
                 </div>
               </th>
               <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="image..."
-                    name="image"
-                    onChange={handleChange}
-                  />
-                </div>
+              <input className="btnSubmit"  type="file" />
+
               </th>
               <th>
                 <div class="ui mini icon input">
@@ -440,6 +455,8 @@ const DashboardProduct = () => {
         }
         colorname={state.filterName === "name" ? "yellow" : "white"}
         colormarque={state.filterMarque === "marque" ? "red" : "black"}
+        colorquantity={state.filterQuantity==="quantity"?"red":"black"}
+        colorcarton={state.filterCarton==="carton"?"red":"black"}
         data={el}
       />
     ))

@@ -101,6 +101,51 @@
       "locallisation": "",
       "carton": "",
       "id": 9
+    },
+    {
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "image": null,
+      "id": 10
+    },
+    {
+      "name": "",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "image": "",
+      "id": 11
+    },
+    {
+      "name": "kluguio",
+      "reference": "",
+      "color": "",
+      "quantity": null,
+      "phase": "",
+      "dimension": "",
+      "marque": "",
+      "type": "",
+      "collection": "",
+      "locallisation": "",
+      "carton": "",
+      "image": null,
+      "id": 12
     }
   ],
   "history": [
@@ -303,6 +348,30 @@
       "date": "6/28/2020, 8:34:30 PM",
       "nameProduct": "sac2",
       "id": 96
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "6/29/2020, 10:47:06 AM",
+      "nameProduct": "",
+      "id": 97
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "6/29/2020, 10:49:13 AM",
+      "nameProduct": "",
+      "id": 98
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "6/29/2020, 10:50:38 AM",
+      "nameProduct": "kluguio",
+      "id": 99
     }
   ],
   "users": [

@@ -21,10 +21,12 @@ const FilterBySlide=(props)=>{
     
 return(
 
-    <div className="field">
+    <div className="s">
        <label for="myRange">{`${Inputname}: ${slide.rage}`}</label>
-        
+       <br/>
+       <button name={Inputname}  className="ui circular  button"  onClick={props.resetSlide}>X</button>
     <input type="range" min="1" max={max}  class="slider" id="myRange" name={Inputname} onChange={(e)=>{handleChangeSlide(e);props.handlechangefilter(e)}}/>
+    
   </div>
 
 )
