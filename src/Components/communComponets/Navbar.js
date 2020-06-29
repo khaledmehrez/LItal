@@ -9,6 +9,8 @@ import { getUserFromApi,patchUserSession,PutUserSata } from '../../api/ApiUsers'
 import "./Navbar.css"
 const Navbar =()=> {
   const dispatch = useDispatch()
+ 
+  
     return (
       <div className="navbar">
         <div class="ui secondary menu container ">
@@ -22,9 +24,10 @@ const Navbar =()=> {
           </div>
         </div>
         </div>
+ 
       
-    );
-  
+    )
+
 }
 
 export default Navbar;

@@ -223,6 +223,7 @@ const DashboardProduct = () => {
             colorDefault={colorDefault}
           />
         </div>
+     
         <FilterBySlide
           handlechangefilter={handlechangefilter}
           Inputname={"quantity"}
@@ -238,6 +239,7 @@ const DashboardProduct = () => {
           resetSlide={resetSlide}
         />
 
+<div className="filter-input">
         <Filter
           dataOptions={[
             { key: "1", value: "production", text: "Production" },
@@ -263,13 +265,13 @@ const DashboardProduct = () => {
           handlechangeDropdownFilter={handlechangeDropdownFilter}
         />
         
-        
+        </div>
       </div>
       <div className="table-product">
         <table class="ui celled table">
           <thead class="">
             <tr>
-              <th class=""></th>
+              <th class="header-array1"></th>
               <th class="header-array">Nom</th>
               <th class="header-array">Référence</th>
               <th class="header-array">Couleur</th>
@@ -282,7 +284,7 @@ const DashboardProduct = () => {
               <th class="header-array">Collection</th>
               <th class="header-array">Locallisation</th>
               <th class="header-array">Carton</th>
-              <th class="header-array">image</th>
+              <th class="header-array-image">image</th>
               <th class="header-array">commentaire</th>
             </tr>
             <tr>
@@ -405,7 +407,7 @@ const DashboardProduct = () => {
                   />
                 </div>
               </th>
-              <th>
+              <th className='choseen'>
               <input className="btnSubmit"  type="file" onChange={ onImageChange} />
 
               </th>

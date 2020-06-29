@@ -77,7 +77,7 @@ export function patchUserSession(data) {
 console.log(data)
     return () => {
         axios.patch("http://localhost:4000/session", {role:data})
-
+        window.location.reload()
     }
 }
 //get user data

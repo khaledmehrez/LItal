@@ -5,6 +5,17 @@
 .header-array{
   background-color: #695548 !important;
   color:whitesmoke!important;
+  width:75px !important;
+}
+.header-array-image{
+  background-color: #695548 !important;
+  color:whitesmoke!important;
+  width:105px !important;
+}
+.header-array1{
+  background-color: #695548 !important;
+  color:whitesmoke!important;
+  width:55px !important;
 }
 .input-form-css{
   width: 250px;

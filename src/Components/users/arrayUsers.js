@@ -7,7 +7,7 @@ const ArrayUsers = (props) => {
     const { dataUsers } = props
     const dispatch = useDispatch()
     function deleteUsers(i) {
-        alert(i)
+       
         dispatch(deleteUsersFromApi(i))
 
     }

@@ -12,12 +12,10 @@
 .table{
    
     table-layout: fixed !important;
-    width: 1420px !important;
+    width: 1440px !important;
+zoom:80%;
 
     background-color: #f2eae3 !important;
-    zoom: 78%;
-    
-    font-size: 20px !important;
 }
 .btn-trash{
   width: 15px;  
@@ -29,8 +27,7 @@ body{
 .table-product{
       
 
-    table-layout:fixed;
-    overflow: scroll;
+    table-layout:fixed
 
      
  }
@@ -38,13 +35,13 @@ body{
 width: 75px;
 }
 .ajout-product{
-    width: 75px;
+    width: 55px;
     color: green;
     border-radius: 5px;
     font-family: 0.4em;
     background-color: transparent;
    border: green solid 2px ;
 }
-.btnSubmit{
-    width:80px;
+.choseen{
+    zoom:69%;
 }

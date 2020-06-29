@@ -28,13 +28,22 @@ export function PostProductAPi(data) {
       image:data.image,
       commentaire: data.commentaire,
       
-    });
+    }
+    
+    ).then((res) =>
+    console.log(res.data),
+
+    window.location.reload()
+  );
+;
+ 
 }
 //delete product
 export function deleteProductFromApi(i) {
 
   return () => {
     axios.delete(`http://localhost:4000/Product/${i}`)
+    window.location.reload()
   }
 
 }

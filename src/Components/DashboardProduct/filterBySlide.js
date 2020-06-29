@@ -21,7 +21,7 @@ const FilterBySlide=(props)=>{
     
 return(
 
-    <div className="s">
+    <div className="">
        <label for="myRange">{`${Inputname}: ${slide.rage}`}</label>
        <br/>
        <button name={Inputname}  className="ui circular  button"  onClick={props.resetSlide}>X</button>

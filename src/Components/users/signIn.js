@@ -20,31 +20,34 @@ const SignIn = () => {
 
 
   function authentification() {
+
     const x = usersState.filter(el => el.email === state.email && el.password === state.password)
     console.log(x)
     if (x.length !== 0 && x[0].email !== 'takoua@gmail.com' && x[0].password !== "0000") {
-      alert('/moderateur')
+ 
+      alert('Bienvenue Moderateur')
       dispatch(patchUserSession("moderateur"))
       dispatch(PutUserSata(x[0]))
     }
     else if (x.length !== 0 && x[0].email === 'takoua@gmail.com' && x[0].password === "0000") {
-      alert('/Admin')
+   
+      alert('Bienvenue Admin')
       dispatch(patchUserSession("admin"))
       dispatch(PutUserSata(x[0]))
     }
 
     else {
-      alert('nexiste pas')
+      alert("n'existe pas")
       dispatch(patchUserSession("guest"))
     }
 
-
+    window.location.reload();
 
   }
 
   return (
     <div className='backround-sign-page'>
-      {/* <img  className="img_login_page" src={logoLital} alt="logo lital" /> */}
+
    
         <div className="ui form ">
         <div className="pageLogin">
@@ -60,7 +63,7 @@ const SignIn = () => {
           <div class="field">
          
           </div>
-          <div className='con-log-btn'>      <button type="button" className="login-button-page" onClick={authentification}>
+          <div className='con-log-btn'><button type="button" className="login-button-page" onClick={authentification}>
             Se connecter
           </button></div>
     
