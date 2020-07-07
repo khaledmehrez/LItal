@@ -1,23 +1,34 @@
-const express=require('express');
-const app= express();
-const mongoose=require('mongoose')
-const bodyParser= require('body-parser')
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose')
+require('dotenv/config')
+const bodyParser = require('body-parser')
 
 //parse json file
 app.use(bodyParser.json());
 //import routes
-//import product route
-const productRoute= require('./routes/product.js');
+//import from route
+const productRoute = require('./routes/product.js');
+const usersRoute = require('./routes/users');
+const historyRoute= require('./routes/history')
 
-app.use('/product',productRoute);
+// mid
+app.use('/product', productRoute,);
+app.use('/users', usersRoute,);
+app.use('/history', historyRoute,);
+
+
+// const usersRoute= require('./routes/users');
+// app.use('/users',usersRoute);
 
 
 //Import routestest
-const testHomeRoute= require('./routes/testHome.js');
-app.use('/',testHomeRoute)
+// const testHomeRoute = require('./routes/testHome.js');
+// app.use('/', testHomeRoute)
 //connect to db
-mongoose.connect('mongodb+srv://khaled:simplonp2@clusterlital.7lpsq.mongodb.net',{ useNewUrlParser: true },()=>{
+
+mongoose.connect(process.env.URI, { useNewUrlParser: true,useUnifiedTopology: true }, () => {
     console.log("connected to db")
 })
 //listen
-app.listen('3000')
+app.listen('4000')
