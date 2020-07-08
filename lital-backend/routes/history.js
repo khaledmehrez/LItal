@@ -4,8 +4,8 @@ const { getHistory, postHistory } = require('../controllers/controhistory')
 const router = express.Router();
 
 
-router.get('/', getHistory)
+router.get('/getHistory', getHistory)
 
-router.post('/', postHistory)
+router.post('/postHistory', postHistory)
 
 module.exports = router;

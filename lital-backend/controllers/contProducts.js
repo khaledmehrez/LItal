@@ -1,24 +1,26 @@
 const ProductModel = require('../model/productModel')
-exports.getProducts =('/getProduct',async(req,res)=>{
+
+
+exports.getProducts = (async (req,res)=>{
     const Productdata = await ProductModel.find()
      res.send(Productdata)
     
 });
 
-exports.postProducts =('/postProduct',(req,res)=>{
-   new ProductModel (
+exports.postProducts =((req,res)=>{
+   const Productdata= new ProductModel (
         {
         name:req.body.name, 
             
             color:req.body.color,
-            quantity:req.body ,
+            quantitys:req.body.quantitys ,
             phase:req.body.phase ,
             dimension:req.body.dimension,
             marque:req.body.marque ,
         
             type:req.body.type ,
           
-            collection:req.body.collection,
+            collections:req.body.collections,
           locallisation:req.body.locallisation,
           carton:req.body.carton ,
       

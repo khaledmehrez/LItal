@@ -3,7 +3,7 @@ const usersModel = require('../model/usersModel')
 const { getUsers, postUsers } = require('../controllers/contUsers')
 const router= express.Router();
 
-router.get('/users',getUsers)
-router.post('/users',postUsers)
+router.get('/getUsers',getUsers)
+router.post('/postUsers',postUsers)
 
 module.exports = router;

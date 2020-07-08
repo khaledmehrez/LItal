@@ -1,13 +1,14 @@
 const usersModel = require('../model/usersModel')
 
-exports.getUsers =('/',async(req,res)=>{
+exports.getUsers =(async(req,res)=>{
     const usersdata = await usersModel.find()
+   
      res.send(usersdata)
     
 });
 
-exports.postUsers =('/',(req,res)=>{
-    const usersdata = new usersdata (
+exports.postUsers =((req,res)=>{
+    const usersdata = new usersModel (
         {
             firstName:req.body.firstName ,
             password:req.body.password,

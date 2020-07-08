@@ -2,7 +2,7 @@ const express=require('express');
 const router= express.Router();
 const path = require('path')
 router.get('/',(req,res)=>{
-   res.send('http://localhost:3000/Product')
+   res.sendFile(__dirname + '/testHome.html')
 })
 
 

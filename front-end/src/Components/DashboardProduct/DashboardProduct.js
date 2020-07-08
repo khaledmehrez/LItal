@@ -48,7 +48,7 @@ const DashboardProduct = () => {
   });
   const getProductState = useSelector((state) => state.getProductState);
   const getUserDataState = useSelector((state) => state.getUserDataState);
-
+console.log(getProductState)
   const dispatch = useDispatch();
 
   useEffect(() => {

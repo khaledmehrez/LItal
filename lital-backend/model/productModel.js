@@ -6,13 +6,13 @@ const ProductSchema=mongoose.Schema(
         color:{type:String},
         reference:{type:String},
   
-        quantity:{type:String} ,
+        quantitys:{type:Number} ,
         phase:{type:String},
         dimension:{type:String},
         marque:{type:String} ,
        
         type:{type:String},
-        collection:{type:String},
+        collections:{type:String},
       locallisation:{type:String},
       carton:{type:String} ,
 
