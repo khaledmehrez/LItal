@@ -5,7 +5,7 @@ import { getProduct } from "../actions/ProductAction";
 export function getProductAPi() {
   return (dispatch) =>
     axios
-      .get("http://localhost:5000/Product/getProduct")
+      .get("http://localhost:4000/Product")
       .then((res) => dispatch(getProduct(res.data)));
 }
 

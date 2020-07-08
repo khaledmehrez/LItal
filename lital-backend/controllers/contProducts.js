@@ -32,5 +32,16 @@ exports.postProducts =((req,res)=>{
     Productdata.save().then(data=>{
         res.json(data)
     })
-    console.log(req.body)
+    
+});
+
+exports.deleteProducts=(async (req,res)=>{
+    const Productdata = await ProductModel.findOneAndDelete(req.params.id)
+    
+    res.send(JSON.stringify(Productdata))
+});
+exports.patchProducts=(async (req,res)=>{
+    const Productdata = await ProductModel.findOneAndUpdate(req.params.id,{name:req.body.name})
+    
+    res.send(JSON.stringify(Productdata))
 });

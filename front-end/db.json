@@ -1,227 +1,94 @@
 {
   "Product": [
     {
-      "name": "sac 2",
-      "reference": "448",
-      "color": "blue",
-      "quantity": null,
-      "phase": "prototype",
-      "dimension": "",
-      "marque": "c",
-      "id": 1,
-      "type": "pochette"
-    },
-    {
-      "name": "sac2",
-      "reference": "25",
-      "color": "blue",
-      "quantity": "2",
-      "phase": "",
+      "name": "volker",
+      "reference": "RT3",
+      "color": "red",
+      "quantity": "3",
+      "phase": "production",
       "dimension": "",
       "marque": "",
-      "type": "",
+      "type": "sac",
       "collection": "",
       "locallisation": "",
-      "carton": "",
-      "id": 3,
-      "image": "jjll",
-      "commentaire": "en retouche "
-    },
-    {
-      "name": "sac2",
-      "reference": "1",
-      "color": "green",
-      "quantity": "10",
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "5",
-      "id": 6,
-      "image": "lol",
-      "commentaire": "fini "
-    },
-    {
-      "name": "sac2",
-      "reference": "25",
-      "color": "green",
-      "quantity": "1",
-      "phase": "",
-      "dimension": "",
-      "marque": "adidas",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 7,
-      "image": "lol",
-      "commentaire": "finiii"
-    },
-    {
-      "name": "sac2",
-      "reference": "25",
-      "color": "blue",
-      "quantity": "2",
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 3,
-      "image": "jj",
-      "commentaire": "en retouche "
-    },
-    {
-      "name": "sac 55",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 8
-    },
-    {
-      "name": " 444 sac",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "id": 9
-    },
-    {
-      "name": "kluguio",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
+      "carton": "1",
       "image": null,
-      "id": 12
+      "id": 1
     },
     {
-      "name": "",
+      "name": "blach",
       "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
+      "color": "tan",
+      "quantity": "4",
+      "phase": "production",
       "dimension": "",
       "marque": "",
-      "type": "",
+      "type": "pochette gm",
       "collection": "",
       "locallisation": "",
-      "carton": "",
-      "image": "",
-      "id": 17
-    },
-    {
-      "name": "",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "image": "blob:http://localhost:3000/b05e7afe-0af6-478c-993d-96ce30ebfcac",
-      "id": 18
-    },
-    {
-      "name": "",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "image": "blob:http://localhost:3000/c16b29d1-ce73-4c28-90e9-99b22dc61bd8",
-      "id": 19
-    },
-    {
-      "name": "",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "image": "blob:http://localhost:3000/9d0d96a1-c1ee-46ac-909c-124f40a9ba92",
-      "id": 20
-    },
-    {
-      "name": "",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
-      "image": "blob:http://localhost:3000/eb5ad006-0850-46dc-ba9b-7729db8003a1",
-      "id": 21
-    },
-    {
-      "name": "dddd",
-      "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
-      "dimension": "",
-      "marque": "",
-      "type": "",
-      "collection": "",
-      "locallisation": "",
-      "carton": "",
+      "carton": "2",
       "image": null,
-      "id": 24
+      "id": 2
     },
     {
-      "name": "jj",
+      "name": "blach",
       "reference": "",
-      "color": "",
-      "quantity": null,
-      "phase": "",
+      "color": "tan",
+      "quantity": "124",
+      "phase": "production",
       "dimension": "",
       "marque": "",
-      "type": "",
+      "type": "pochette pm",
       "collection": "",
       "locallisation": "",
-      "carton": "",
+      "carton": "2",
       "image": null,
-      "id": 25
+      "id": 3
+    },
+    {
+      "name": "blach",
+      "reference": "",
+      "color": "black",
+      "quantity": "3",
+      "phase": "production",
+      "dimension": "",
+      "marque": "",
+      "type": "pochette pm",
+      "collection": "",
+      "locallisation": "",
+      "carton": "2",
+      "image": null,
+      "id": 4
+    },
+    {
+      "name": "blach",
+      "reference": "",
+      "color": "black",
+      "quantity": "12",
+      "phase": "production",
+      "dimension": "",
+      "marque": "",
+      "type": "pochette gm",
+      "collection": "",
+      "locallisation": "",
+      "carton": "2",
+      "image": null,
+      "id": 5
+    },
+    {
+      "name": "blach",
+      "reference": "",
+      "color": "black",
+      "quantity": "4",
+      "phase": "production",
+      "dimension": "",
+      "marque": "",
+      "type": "trousse gm",
+      "collection": "",
+      "locallisation": "",
+      "carton": "3",
+      "image": null,
+      "id": 6
     }
   ],
   "history": [
@@ -656,6 +523,654 @@
       "date": "6/29/2020, 9:49:04 PM",
       "nameProduct": "",
       "id": 125
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:13:43 PM",
+      "nameProduct": " khaled",
+      "id": 126
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:13:51 PM",
+      "nameProduct": " khaled",
+      "id": 127
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "7/8/2020, 2:14:00 PM",
+      "nameProduct": "sfsf",
+      "id": 128
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:14:15 PM",
+      "nameProduct": "sfsf",
+      "id": 129
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "7/8/2020, 2:14:23 PM",
+      "nameProduct": "sgsfs",
+      "id": 130
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:14:27 PM",
+      "nameProduct": " khaled",
+      "id": 131
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:15:10 PM",
+      "nameProduct": "sgsfs",
+      "id": 132
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:16:40 PM",
+      "nameProduct": "sgsfs",
+      "id": 133
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:16:52 PM",
+      "nameProduct": "sgsfs",
+      "id": 134
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:52 PM",
+      "nameProduct": "",
+      "id": 135
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:56 PM",
+      "nameProduct": "jj",
+      "id": 136
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:58 PM",
+      "nameProduct": "jj",
+      "id": 137
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:59 PM",
+      "nameProduct": "jj",
+      "id": 138
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:59 PM",
+      "nameProduct": "jj",
+      "id": 139
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:17:59 PM",
+      "nameProduct": "jj",
+      "id": 140
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:18:00 PM",
+      "nameProduct": "jj",
+      "id": 141
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:18:00 PM",
+      "nameProduct": "jj",
+      "id": 142
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:18:09 PM",
+      "nameProduct": "pjo",
+      "id": 143
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:18:11 PM",
+      "nameProduct": "pjo",
+      "id": 144
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:19:59 PM",
+      "nameProduct": "pjo",
+      "id": 145
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:00 PM",
+      "nameProduct": "dddd",
+      "id": 146
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:03 PM",
+      "nameProduct": "",
+      "id": 147
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:04 PM",
+      "nameProduct": "",
+      "id": 148
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:05 PM",
+      "nameProduct": "",
+      "id": 149
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:06 PM",
+      "nameProduct": "",
+      "id": 150
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:20:07 PM",
+      "nameProduct": "",
+      "id": 151
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:21:13 PM",
+      "nameProduct": "sgsfs",
+      "id": 152
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:21:25 PM",
+      "nameProduct": "sac",
+      "id": 153
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "7/8/2020, 2:21:37 PM",
+      "nameProduct": "dffbdh",
+      "id": 154
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:21:40 PM",
+      "nameProduct": "sgsfs",
+      "id": 155
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:21:42 PM",
+      "nameProduct": "sgsfs",
+      "id": 156
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:23:02 PM",
+      "nameProduct": "dffbdh",
+      "id": 157
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:23:55 PM",
+      "nameProduct": "dddd",
+      "id": 158
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:24:06 PM",
+      "nameProduct": "dffbdhdfvv",
+      "id": 159
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:27:11 PM",
+      "nameProduct": "dffbdh",
+      "id": 160
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:28:55 PM",
+      "nameProduct": "dffbdh",
+      "id": 161
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:29:01 PM",
+      "nameProduct": "dffbdh",
+      "id": 162
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:29:06 PM",
+      "nameProduct": "dffbdh",
+      "id": 163
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:32:02 PM",
+      "nameProduct": "sgsfs",
+      "id": 164
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:33:21 PM",
+      "nameProduct": "sgsfs",
+      "id": 165
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:33:31 PM",
+      "nameProduct": "sgsfs",
+      "id": 166
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:33:58 PM",
+      "nameProduct": "sgsfs",
+      "id": 167
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:34:12 PM",
+      "nameProduct": " khaled",
+      "id": 168
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:34:23 PM",
+      "nameProduct": "sgsfs",
+      "id": 169
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:35:33 PM",
+      "nameProduct": "dffbdh",
+      "id": 170
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:35:37 PM",
+      "nameProduct": "dffbdh",
+      "id": 171
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:41:01 PM",
+      "nameProduct": "dffbdh",
+      "id": 172
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:41:19 PM",
+      "nameProduct": "hhhhhhhh",
+      "id": 173
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:42:37 PM",
+      "nameProduct": "kluguio",
+      "id": 174
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:43:05 PM",
+      "nameProduct": "kluguio",
+      "id": 175
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:43:07 PM",
+      "nameProduct": " 444 sac",
+      "id": 176
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:44:18 PM",
+      "nameProduct": "dffbdh",
+      "id": 177
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:44:22 PM",
+      "nameProduct": "dffbdh",
+      "id": 178
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:44:26 PM",
+      "nameProduct": "sfsf",
+      "id": 179
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:44:31 PM",
+      "nameProduct": "sfsffsf",
+      "id": 180
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:45:26 PM",
+      "nameProduct": "dffbdh",
+      "id": 181
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:45:34 PM",
+      "nameProduct": "dffbdh",
+      "id": 182
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:45:36 PM",
+      "nameProduct": "dffbdh",
+      "id": 183
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:45:43 PM",
+      "nameProduct": "dffbdh",
+      "id": 184
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:46:30 PM",
+      "nameProduct": "dffbdh",
+      "id": 185
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:46:55 PM",
+      "nameProduct": " khaled",
+      "id": 186
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:46:59 PM",
+      "nameProduct": " khaled",
+      "id": 187
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:47:01 PM",
+      "nameProduct": " khaled",
+      "id": 188
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:47:03 PM",
+      "nameProduct": " khaled",
+      "id": 189
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:48:15 PM",
+      "nameProduct": " khaled1",
+      "id": 190
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:48:19 PM",
+      "nameProduct": " khaled4",
+      "id": 191
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:48:30 PM",
+      "nameProduct": " khaled3",
+      "id": 192
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:48:36 PM",
+      "nameProduct": " khaled4",
+      "id": 193
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:55:34 PM",
+      "nameProduct": "sac ",
+      "id": 194
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 2:56:07 PM",
+      "nameProduct": "khaled",
+      "id": 195
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:17 PM",
+      "nameProduct": "khaled",
+      "id": 196
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:19 PM",
+      "nameProduct": "sac2",
+      "id": 197
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:24 PM",
+      "nameProduct": "sac2",
+      "id": 198
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:27 PM",
+      "nameProduct": "sac2",
+      "id": 199
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:29 PM",
+      "nameProduct": "sac 2",
+      "id": 200
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 2:56:30 PM",
+      "nameProduct": "sac 2",
+      "id": 201
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "add Product",
+      "date": "7/8/2020, 3:03:46 PM",
+      "nameProduct": "",
+      "id": 202
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 3:04:01 PM",
+      "nameProduct": "volker",
+      "id": 203
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 3:04:10 PM",
+      "nameProduct": "",
+      "id": 204
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "delete product",
+      "date": "7/8/2020, 3:10:00 PM",
+      "nameProduct": "blach",
+      "id": 205
+    },
+    {
+      "name": "admin",
+      "role": "admin",
+      "nameAction": "edit Product",
+      "date": "7/8/2020, 3:15:50 PM",
+      "nameProduct": "blach",
+      "id": 206
     }
   ],
   "users": [
@@ -677,7 +1192,7 @@
   ],
   "session": {
     "id": 1,
-    "role": "admin"
+    "role": "moderateur"
   },
   "userData": [
     {

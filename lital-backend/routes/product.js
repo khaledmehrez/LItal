@@ -1,11 +1,17 @@
 const express = require('express');
 const ProductModel = require('../model/productModel.js')
-const { getProducts, postProducts } = require('../controllers/contProducts')
+const { getProducts, postProducts,deleteProducts,patchProducts} = require('../controllers/contProducts')
 const router = express.Router();
-console.log(ProductModel)
+
 
 router.get('/getProduct', getProducts)
 
 router.post('/postProduct', postProducts)
+
+router.delete('/deleteProduct/:postId',deleteProducts)
+router.patch('/patchProduct/:postId',patchProducts)
+
+
+
 
 module.exports = router;
