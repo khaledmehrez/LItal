@@ -28,7 +28,7 @@ const History = () => {
                 </thead>
                 <tbody class="">
 
-                    {historyState.map(el => <ArrayHistory dataHistory={el} />)}
+                    {historyState.map(el => <ArrayHistory dataHistory={el} />).reverse()}
 
 
                 </tbody>
