@@ -5,7 +5,7 @@ import { getProduct } from "../actions/ProductAction";
 export function getProductAPi() {
   return (dispatch) =>
     axios
-      .get("http://localhost:4000/Product")
+      .get("http://localhost:5000/Product/getProduct")
       .then((res) => dispatch(getProduct(res.data)));
 }
 
@@ -13,7 +13,7 @@ export function getProductAPi() {
 export function PostProductAPi(data) {
 
   return () =>
-    axios.post("http://localhost:4000/Product", {
+    axios.post("http://localhost:5000/Product/postProduct", {
       name: data.name,
       reference: data.reference,
       color: data.color,
@@ -25,24 +25,24 @@ export function PostProductAPi(data) {
       collection: data.collection,
       locallisation: data.locallisation,
       carton: data.carton,
-      image:data.image,
+      image: data.image,
       commentaire: data.commentaire,
-      
-    }
-    
-    ).then((res) =>
-    console.log(res.data),
 
-    window.location.reload()
-  );
-;
- 
+    }
+
+    ).then((res) =>
+      console.log(res.data),
+
+      window.location.reload()
+    );
+  ;
+
 }
 //delete product
 export function deleteProductFromApi(i) {
 
   return () => {
-    axios.delete(`http://localhost:4000/Product/${i}`)
+    axios.delete(`http://localhost:5000/Product/deleteProduct/${i}`)
     window.location.reload()
   }
 
@@ -53,7 +53,8 @@ export function patchProductToApi(id, name, reference, color, quantity, phase, d
 
 
   return () => {
-    axios.patch(`http://localhost:4000/Product/${id}`, {
+
+    axios.patch(`http://localhost:5000/Product/patchProduct/${id}`, {
 
 
       name: name,
@@ -74,7 +75,7 @@ export function patchProductToApi(id, name, reference, color, quantity, phase, d
     }).then((res) =>
       console.log(res.data),
 
-      window.location.reload()
+ 
     );
 
   }

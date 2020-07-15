@@ -5,7 +5,7 @@ import { dataHistory } from '../actions/HistoryAction'
 //history //
 export function getHistoryFromApi() {
     return (dispatch) => {
-        axios.get("http://localhost:4000/history").then(response => {
+        axios.get("http://localhost:5000/history/getHistory").then(response => {
             dispatch(dataHistory(response.data))
         })
     }
@@ -14,7 +14,7 @@ export function getHistoryFromApi() {
 export function PostHistoryFromApi(data) {
     console.log(data)
     return () => {
-        axios.post("http://localhost:4000/history",data)
+        axios.post("http://localhost:5000/history/postHistory",data)
     }
 }
 

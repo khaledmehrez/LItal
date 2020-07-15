@@ -26,13 +26,17 @@ exports.postUsers =((req,res)=>{
 });
 
 exports.deleteUsers=(async (req,res)=>{
-    const Userdata = await usersModel.findOneAndDelete(req.params.id)
+    
+    const Userdata = await usersModel.findOneAndDelete({_id:req.params.postId})
     
     res.send(JSON.stringify(Userdata))
 });
 exports.patchUsers=(async (req,res)=>{
-    const Userdata = await usersModel.findOneAndUpdate(req.params.id,{firstName:req.body.firstName})
+    
+    const Userdata = await usersModel.findOneAndUpdate({_id:req.params.postId}, {$set:{firstName:req.body.firstName}})
     
     res.send(JSON.stringify(Userdata))
 });
+
+
 

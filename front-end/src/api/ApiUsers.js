@@ -9,7 +9,7 @@ import { userdata,sessionAction,userDataAction } from '../actions/UserAction'
 export function getUserFromApi() {
 
     return (dispatch) => {
-        axios.get("http://localhost:4000/users").then(response => {
+        axios.get("http://localhost:5000/users/getUsers").then(response => {
             dispatch(userdata(response.data))
 
         })
@@ -22,7 +22,7 @@ export const postUsersToApi = (data) => {
     // console.log(el)
     window.location.reload();
     return () => {
-        axios.post('http://localhost:4000/users', data)
+        axios.post('http://localhost:5000/users/postUsers', data)
             .then(() => {
                 alert('hu')
             })
@@ -31,7 +31,7 @@ export const postUsersToApi = (data) => {
 export function deleteUsersFromApi(i) {
     window.location.reload()
     return () => {
-        axios.delete(`http://localhost:4000/users/${i}`)
+        axios.delete(`http://localhost:5000/users/deleteUsers/${i}`)
     }
 
 }
@@ -39,9 +39,9 @@ export function deleteUsersFromApi(i) {
 
 export function patchUsersToApi(id, firstName, lastName, email, userName, post, password) {
     // console.log(el)
-
+       
     return () => {
-        axios.patch(`http://localhost:4000/users/${id}`, {
+        axios.patch(`http://localhost:5000/users/patchUsers/${id}`, {
 
 
             firstName: firstName,
@@ -55,7 +55,7 @@ export function patchUsersToApi(id, firstName, lastName, email, userName, post, 
         }).then((res) =>
             console.log(res.data),
 
-            window.location.reload()
+           
         );
 
     }

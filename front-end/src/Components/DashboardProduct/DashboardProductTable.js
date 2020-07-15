@@ -61,7 +61,7 @@ console.log(data.image)
 
 
 
-        <td>  <button className='ui red basic button btn-trash' name="delete product" value={data.id} onClick={deleteProduct}>X</button>
+        <td>  <button className='ui red basic button btn-trash' name="delete product" value={data._id} onClick={deleteProduct}>X</button>
 
           < Modal trigger={< button className="ui blue basic button  btn-trash " ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
@@ -82,7 +82,7 @@ console.log(data.image)
                 <input  className='input-form-css'type="text" value={state.carton} name="carton" onChange={handleChange} /><br/>
                 <input  className='input-form-css'type="text" value={state.image} name="image" onChange={handleChange} /><br/>
                 <input  className='input-form-css' type="text" value={state.commentaire} name="commentaire" onChange={handleChange} /><br/>
-                <button type="submit" name="edit Product" value={data.id} onClick={editProduct
+                <button type="submit" name="edit Product" value={data._id} onClick={editProduct
                 } class="ui positive button"
                 >
                   Sauvgarder

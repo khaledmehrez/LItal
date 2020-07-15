@@ -56,7 +56,7 @@ const ArrayUsers = (props) => {
 
             <td class="">
                 <center>
-                    <button className='ui red basic button btn-trash' onClick={() => deleteUsers(dataUsers.id)}>X</button>
+                    <button className='ui red basic button btn-trash' onClick={() => deleteUsers(dataUsers._id)}>X</button>
                     < Modal trigger={< button className="ui blue basic button  btn-trash "> <i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
                         <Modal.Content >
 
@@ -96,7 +96,7 @@ const ArrayUsers = (props) => {
                                     />
                                 </div>
                                 <br />
-                                <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers.id, state.firstName, state.lastName, state.email, state.userName, state.post, state.password)}
+                                <button type="submit" className="btn-sign-compte" onClick={() => editUsers(dataUsers._id, state.firstName, state.lastName, state.email, state.userName, state.post, state.password)}
                                     class="ui positive button"
                                 >
                                     Sauvgarder
