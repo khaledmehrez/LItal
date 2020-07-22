@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-
+import * as jwt_decode from 'jwt-decode'
 const initialstate = []
 //**************************TEST *****************************************************/
 const testreducer = (state = initialstate, action) => {
@@ -54,8 +54,10 @@ function usersReducer(state = tabUsers, action) {
 
 
 //get user session
+const tokenFromLocalStorage=localStorage.getItem("token")
 
-const getUserReducer = (state = initialstate, action) => {
+const statSession=(tokenFromLocalStorage==="")?"guest":jwt_decode(tokenFromLocalStorage).data.role
+const getUserReducer = (state = statSession, action) => {
 
     if (action.type === "session") {
         return action.payload

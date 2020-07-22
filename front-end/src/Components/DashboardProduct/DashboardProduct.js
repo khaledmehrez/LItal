@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Icon, Label, Menu, Table } from "semantic-ui-react";
-
+import * as jwt_decode from 'jwt-decode'
 import { connect } from "react-redux";
 import { getProductAPi, PostProductAPi } from "../../api/ApiProduct";
 import { getUserDataApi } from "../../api/ApiUsers";
@@ -148,8 +148,11 @@ console.log(getProductState)
   }
 
   // role of user
-  const name = { ...getUserDataState[0] }.firstName;
-  const role = { ...getUserDataState[0] }.role;
+  const tokenFromLocalStorage=localStorage.getItem("token")
+  const decodedToken=jwt_decode(tokenFromLocalStorage)
+  const name = decodedToken.data.firstName;
+  const role = decodedToken.data.role;
+  
   // add product
   function addProduct(e) {
     

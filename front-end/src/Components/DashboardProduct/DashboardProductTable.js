@@ -5,6 +5,7 @@ import { Icon, Label, Menu, Table, Modal } from 'semantic-ui-react'
 import { deleteProductFromApi, patchProductToApi } from "../../api/ApiProduct";
 import { PostHistoryFromApi } from "../../api/ApiHistory";
 import { getUserDataApi } from "../../api/ApiUsers";
+import * as jwt_decode from 'jwt-decode'
 const DashboardProductTable = (props) => {
 
   const { data } = props;
@@ -16,8 +17,10 @@ const DashboardProductTable = (props) => {
     dispatch(getUserDataApi());
   }, [dispatch]);
   //role of user
-  const name = { ...getUserDataState[0] }.firstName;
-  const role = { ...getUserDataState[0] }.role;
+  const tokenFromLocalStorage=localStorage.getItem("token")
+  const decodedToken=jwt_decode(tokenFromLocalStorage)
+  const name = decodedToken.data.firstName;
+  const role = decodedToken.data.role;
   console.log(name)
   //delete product
   function deleteProduct(e) {

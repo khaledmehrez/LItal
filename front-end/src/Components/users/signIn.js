@@ -4,8 +4,8 @@ import { Button, Header, Image, Modal } from "semantic-ui-react";
 import "./signin.css"
 
 
-import { getUserFromApi, patchUserSession, PutUserSata } from '../../api/ApiUsers';
-
+import { getUserFromApi, patchUserSession, PutUserSata,postUsersloginApi } from '../../api/ApiUsers';
+import{ sessionAction} from '../../actions/UserAction'
 
 const SignIn = () => {
 
@@ -21,30 +21,37 @@ const SignIn = () => {
 
   function authentification() {
 
-    const x = usersState.filter(el => el.email === state.email && el.password === state.password)
-    console.log(x)
-    if (x.length !== 0 && x[0].email !== 'takoua@gmail.com' && x[0].password !== "0000") {
+    // const x = usersState.filter(el => el.email === state.email && el.password === state.password)
+    // console.log(x)
+    // if (x.length !== 0 && x[0].email !== 'takoua@gmail.com' && x[0].password !== "0000") {
  
-      alert('Bienvenue Moderateur')
-      dispatch(patchUserSession("moderateur"))
-      dispatch(PutUserSata(x[0]))
-    }
-    else if (x.length !== 0 && x[0].email === 'takoua@gmail.com' && x[0].password === "0000") {
+    //   alert('Bienvenue Moderateur')
+    //   dispatch(patchUserSession("moderateur"))
+    //   dispatch(PutUserSata(x[0]))
+    // }
+    // else if (x.length !== 0 && x[0].email === 'takoua@gmail.com' && x[0].password === "0000") {
    
-      alert('Bienvenue Admin')
-      dispatch(patchUserSession("admin"))
-      dispatch(PutUserSata(x[0]))
-    }
+    //   alert('Bienvenue Admin')
+    //   dispatch(patchUserSession("admin"))
+    //   dispatch(PutUserSata(x[0]))
+    // }
 
-    else {
-      alert("n'existe pas")
-      dispatch(patchUserSession("guest"))
-    }
+    // else {
+    //   alert("n'existe pas")
+    //   dispatch(patchUserSession("guest"))
+    // }
 
-    window.location.reload();
+    // window.location.reload();
+    dispatch(postUsersloginApi(state))
+    
+    
+    
+    
+    
+    
 
   }
-
+  
   return (
     <div className='backround-sign-page'>
 

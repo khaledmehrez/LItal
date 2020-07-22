@@ -10,7 +10,10 @@ import "./Navbar.css"
 const Navbar =()=> {
   const dispatch = useDispatch()
  
-  
+  function deconnect (){
+  localStorage.setItem('token',"")
+  window.location.reload()
+  }
     return (
       <div className="navbar">
         <div class="ui secondary menu container ">
@@ -19,7 +22,7 @@ const Navbar =()=> {
           <div class="right menu">
          
             
-            <button className="deconnection_button"  class=" item" onClick={()=>dispatch(patchUserSession("guest"))}> <i aria-hidden="true"   class="log out icon"></i> Se déconnecter </button>
+            <button className="deconnection_button"  class=" item" onClick={deconnect}> <i aria-hidden="true"   class="log out icon"></i> Se déconnecter </button>
 
           </div>
         </div>

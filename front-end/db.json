@@ -1568,7 +1568,7 @@
   ],
   "session": {
     "id": 1,
-    "role": "admin"
+    "role": "guest"
   },
   "userData": [
     {

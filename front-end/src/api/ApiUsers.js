@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { userdata,sessionAction,userDataAction } from '../actions/UserAction'
-
+import * as jwt_decode from 'jwt-decode'
 
 
 //users//
@@ -61,12 +61,35 @@ export function patchUsersToApi(id, firstName, lastName, email, userName, post, 
     }
 
 }
+//post user login
+export const postUsersloginApi = (data) => {
+    // console.log(el)
+    
+    return (dispatch) => {
+        axios.post('http://localhost:5000/users/login', data)
+            .then((res) => {
+                if (res.data.token!==undefined){
+                    localStorage.setItem("token",res.data.token)
+                    const tokenFromLocalStorage=localStorage.getItem("token")
+                    const decodedToken=jwt_decode(tokenFromLocalStorage)
+                    
+                    dispatch(sessionAction(decodedToken.data.role))
+                    window.location.reload()                }
+               else{
+                   alert(res.data)
+               }
+
+                
+               
+            })
+    }
+};
 //get user session
 export function getUserSession() {
 
     return (dispatch) => {
         axios.get("http://localhost:4000/session").then(response => {
-            dispatch(sessionAction(response.data))
+            //dispatch(sessionAction(response.data))
 
         })
 

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserFromApi } from '../../api/ApiUsers';
 import ArrayUsers from './arrayUsers'
 import Register from './register'
+
 export default function GestionnaireUsers() {
 
     const usersState = useSelector((state) => state.usersState)

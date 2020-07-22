@@ -24,19 +24,19 @@ const App = () => {
   useEffect(() => { dispatch(getUserSession()); }, [dispatch]);
 
 
-console.log(sessionState.role)
+console.log(sessionState)
 
 
   
 
-if(sessionState.role===undefined){
+if(sessionState===undefined){
   return <LoaderExampleLoader />
 }
-     else if  (sessionState.role==="admin" ||sessionState.role==="moderateur"){
+     else if  (sessionState==="admin" ||sessionState==="moderateur"){
        return(
      <div className="App">
       <Navbar />
-      <Sidebar sessionState={sessionState.role}/>
+      <Sidebar sessionState={sessionState}/>
       </div>)}
       else
       return(<SignIn />)
