@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { Checkbox } from 'semantic-ui-react'
-
+import Gallerie from "../Gallerie/Gallerie"
 
 import { Route, Switch, Link } from 'react-router-dom';
 import DashboardProduct from '../DashboardProduct/DashboardProduct';
@@ -55,6 +55,10 @@ const SidebarExampleVisible = (props) => {
       <Icon name='history' />
         Historique
       </Menu.Item>
+      <Menu.Item as={Link} to="/gallerie" >
+      <Icon name='chart bar' />
+        Gallerie
+      </Menu.Item>
     </Sidebar>
 
     <Sidebar.Pusher >
@@ -66,6 +70,7 @@ const SidebarExampleVisible = (props) => {
           <Route path='/Product' component={DashboardProduct} />
           <Route path='/history' component={History} />
           <Route path='/gestionnaireUsers' component={GestionnaireUsers} />
+          <Route path='/gallerie' component={Gallerie} />
         </Switch>
       </Segment>
       </div>

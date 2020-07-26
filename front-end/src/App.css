@@ -33,3 +33,15 @@
 
   background-color: rgb(255, 255, 255,0.8);  
 }
+.gallerie{
+  width: 420px;
+}
+.box-table-image{
+  width: 120px;
+  height: 100px;
+}
+.box-filter-c{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5px;
+}

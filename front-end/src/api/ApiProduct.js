@@ -13,22 +13,10 @@ export function getProductAPi() {
 export function PostProductAPi(data) {
 
   return () =>
-    axios.post("http://localhost:5000/Product/postProduct", {
-      name: data.name,
-      reference: data.reference,
-      color: data.color,
-      quantity: data.quantity,
-      phase: data.phase,
-      dimension: data.dimension,
-      marque: data.marque,
-      type: data.type,
-      collection: data.collection,
-      locallisation: data.locallisation,
-      carton: data.carton,
-      image: data.image,
-      commentaire: data.commentaire,
+    axios.post("http://localhost:5000/Product/postProduct", 
+ data
 
-    }
+    
 
     ).then((res) =>
       console.log(res.data),

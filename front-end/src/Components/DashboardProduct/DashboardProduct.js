@@ -1,6 +1,8 @@
 import React, { Component, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Modal } from "semantic-ui-react";
 import { Icon, Label, Menu, Table } from "semantic-ui-react";
+import axios from 'axios'
 import * as jwt_decode from 'jwt-decode'
 import { connect } from "react-redux";
 import { getProductAPi, PostProductAPi } from "../../api/ApiProduct";
@@ -28,7 +30,7 @@ const DashboardProduct = () => {
     collection: "",
     locallisation: "",
     carton: "",
-    image: null,
+    image: "",
     filterName: "",
     filterColor: "",
     filterReference: "",
@@ -36,8 +38,8 @@ const DashboardProduct = () => {
     filterMarque: "",
     filterCarton: "",
     filterPhase: "",
-    filterType:"",
-    SearchType:"",
+    filterType: "",
+    SearchType: "",
     SearchPhase: "",
     SearchCarton: "",
     SearchMarque: "",
@@ -48,7 +50,7 @@ const DashboardProduct = () => {
   });
   const getProductState = useSelector((state) => state.getProductState);
   const getUserDataState = useSelector((state) => state.getUserDataState);
-console.log(getProductState)
+  console.log(getProductState)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -148,18 +150,33 @@ console.log(getProductState)
   }
 
   // role of user
-  const tokenFromLocalStorage=localStorage.getItem("token")
-  const decodedToken=jwt_decode(tokenFromLocalStorage)
+  const tokenFromLocalStorage = localStorage.getItem("token")
+  const decodedToken = jwt_decode(tokenFromLocalStorage)
   const name = decodedToken.data.firstName;
   const role = decodedToken.data.role;
-  
+
   // add product
   function addProduct(e) {
-    
-  
-    dispatch(PostProductAPi(state));
+
+
+    dispatch(PostProductAPi({
+
+      name: state.name,
+      reference: state.reference,
+      color: state.color,
+      quantity: state.quantity,
+      phase: state.phase,
+      dimension: state.dimension,
+      marque: state.marque,
+      type: state.type,
+      collection: state.collection,
+      locallisation: state.locallisation,
+      carton: state.carton,
+      image: state.image.name,
+      commentaire: state.commentaire,
+    }));
     const nameAction = "add Product";
-    
+
     const date = new Date().toLocaleString();
     const nameProduct = state.name;
     const objHistory = { name, role, nameAction, date, nameProduct };
@@ -167,9 +184,9 @@ console.log(getProductState)
     dispatch(PostHistoryFromApi(objHistory));
   }
   //reset slide
-  function resetSlide(e){
+  function resetSlide(e) {
     if (e.target.name === "quantity") {
-      
+
       setState((prevState) => ({ ...prevState, filterQuantity: "" }));
       setState((prevState) => ({ ...prevState, SearchQuantity: "" }));
     }
@@ -179,18 +196,26 @@ console.log(getProductState)
     }
   }
   //upload picture
-  
-    function onImageChange(event) {
-      console.log("5")
-     
-    
-    }
-      
-    
-  ;
-  
-  
-  
+  function handleOnUploadFile(e) {
+    setState({ image: e.target.files[0] });
+    // setState({ image: state.file });
+    console.log('ddddd', state.image)
+  }
+
+  function handleOnSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", state.image);
+    console.log(state.image);
+    console.log(formData)
+
+    axios
+      .post("http://localhost:5000/image", formData)
+      .then(res => console.log(res))
+      .catch(err => console.error(err));
+  };
+
+
   return (
     <div className="">
       {/* <Filter handlechangefilter={handlechangefilter} />*/}
@@ -203,7 +228,164 @@ console.log(getProductState)
           />
         </div>
       ) : null} */}
-      <div>
+      <Modal
+        trigger={
+          <button button style={{ height: '55px' }} className="ajout-product  green basic button">
+            <p>ajout</p>
+          </button>
+        }
+        closeIcon
+      >
+        <Modal.Content>
+          <center>
+            <center>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="name..."
+                  name="name"
+                  onChange={handleChange}
+                />
+              </div>
+            </center>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="reference..."
+                  name="reference"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="color..."
+                  name="color"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="quantite..."
+                  name="quantity"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="phase..."
+                  name="phase"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="dimension..."
+                  name="dimension"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="marque..."
+                  name="marque"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <th>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="type..."
+                  name="type"
+                  onChange={handleChange}
+                />
+              </div>
+            </th>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="collection..."
+                  name="collection"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="locallisation..."
+                  name="locallisation"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div>
+              <div class="ui  icon input">
+                <input
+                  type="text"
+                  placeholder="carton..."
+                  name="carton"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className='choseen'>
+
+
+              <div class="file-field input-field">
+                <div class="btn grey">
+                  <span>File</span>
+                  <input name="file" type="file" onChange={handleOnUploadFile} />
+                </div>
+              </div>
+              <button type="submit" class="btn" onClick={handleOnSubmit}>Submit</button>
+
+
+
+            </div>
+
+            <div class="ui  icon input">
+              <input
+                type="text"
+                placeholder="commentaire..."
+                name="commentaire"
+                onChange={handleChange}
+              />
+            </div>
+
+            <br />
+            <button type="submit" className="btn-sign-compte" class="ui positive button" onClick={addProduct}>
+              Valider
+          </button>
+          </center>
+        </Modal.Content>
+      </Modal>
+
+
+
+
+
+
+      <div className='box-filter-c'>
         <div className="filter-input">
           <FilterByInput
             Inputname={"name"}
@@ -226,7 +408,8 @@ console.log(getProductState)
             colorDefault={colorDefault}
           />
         </div>
-     
+      </div>
+      <div className='box-filter-c'>
         <FilterBySlide
           handlechangefilter={handlechangefilter}
           Inputname={"quantity"}
@@ -242,32 +425,32 @@ console.log(getProductState)
           resetSlide={resetSlide}
         />
 
-<div className="filter-input">
-        <Filter
-          dataOptions={[
-            { key: "1", value: "production", text: "Production" },
-            { key: "2", value: "prototype", text: "Prototype" },
-          ]}
-          Inputname={"phase"}
-          handlechangeDropdownFilter={handlechangeDropdownFilter}
-        />
+        <div className="filter-input">
+          <Filter
+            dataOptions={[
+              { key: "1", value: "production", text: "Production" },
+              { key: "2", value: "prototype", text: "Prototype" },
+            ]}
+            Inputname={"phase"}
+            handlechangeDropdownFilter={handlechangeDropdownFilter}
+          />
 
-        <Filter
-          dataOptions={[
-            { key: "1", value: "blue", text: "blue" },
-            { key: "2", value: "red", text: "red" },
-            { key: "3", value: "black", text: "black" },
-            { key: "4", value: "grey", text: "grey" },
-            { key: "5", value: "white", text: "white" },
-            { key: "6", value: "orange", text: "orange" },
-            { key: "7", value: "purple", text: "purple" },
-            { key: "8", value: "pink", text: "pink" },
-            { key: "9", value: "tan", text: "tan" },
-          ]}
-          Inputname={"color"}
-          handlechangeDropdownFilter={handlechangeDropdownFilter}
-        />
-        
+          <Filter
+            dataOptions={[
+              { key: "1", value: "blue", text: "blue" },
+              { key: "2", value: "red", text: "red" },
+              { key: "3", value: "black", text: "black" },
+              { key: "4", value: "grey", text: "grey" },
+              { key: "5", value: "white", text: "white" },
+              { key: "6", value: "orange", text: "orange" },
+              { key: "7", value: "purple", text: "purple" },
+              { key: "8", value: "pink", text: "pink" },
+              { key: "9", value: "tan", text: "tan" },
+            ]}
+            Inputname={"color"}
+            handlechangeDropdownFilter={handlechangeDropdownFilter}
+          />
+
         </div>
       </div>
       <div className="table-product">
@@ -291,142 +474,10 @@ console.log(getProductState)
               <th class="header-array">commentaire</th>
             </tr>
             <tr>
-              <th>
-                <button
-                  className="ajout-product  green basic button"
-                  name="add Product"
-                  onClick={addProduct}
-                >
-                  <p>Ajout </p>
-                </button>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="name..."
-                    name="name"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="reference..."
-                    name="reference"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="color..."
-                    name="color"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="quantite..."
-                    name="quantity"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="phase..."
-                    name="phase"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="dimension..."
-                    name="dimension"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="marque..."
-                    name="marque"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="type..."
-                    name="type"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="collection..."
-                    name="collection"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="locallisation..."
-                    name="locallisation"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="carton..."
-                    name="carton"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-              <th className='choseen'>
-              <input className="btnSubmit"  type="file" onChange={ onImageChange} />
 
-              </th>
-              <th>
-                <div class="ui mini icon input">
-                  <input
-                    type="text"
-                    placeholder="commentaire..."
-                    name="commentaire"
-                    onChange={handleChange}
-                  />
-                </div>
-              </th>
-             
-            
-            
+
+
+
             </tr>
           </thead>
 
@@ -465,87 +516,87 @@ console.log(getProductState)
                 ))
                 .reverse()
             : null} */}
-  {
-    getProductState
-      .filter(
-        state.filterName === "name" && state.SearchName !== ""
-          ? (el) => el.name.includes(state.SearchName)
-          : (el) => el
-      )
-    .filter(
-      state.filterMarque === "marque" && state.SearchMarque !== ""
-        ? (el) => el.marque.includes(state.SearchMarque)
-        : (el) => el
-    )
-    .filter(
-      state.filterReference === "reference" &&
-        state.SearchReference !== ""
-        ? (el) => el.reference === state.SearchReference
-        : (el) => el
-    )
-    .filter(
-      state.filterQuantity === "quantity" && state.SearchQuantity !== ""
-        ? (el) => el.quantity === state.SearchQuantity
-        : (el) => el
-    )
-    .filter(
-      state.filterCarton === "carton" && state.SearchCarton !== ""
-        ? (el) => el.carton === state.SearchCarton
-        : (el) => el
-    ).filter(
-      state.filterPhase === "phase" && state.SearchPhase !== ""
-        ? (el) => el.phase === state.SearchPhase
-        : (el) => el
-    ).filter(
-      state.filterColor === "color" && state.SearchColor !== ""
-        ? (el) => el.color.includes( state.SearchColor)
-        : (el) => el
-    ).filter(
-      state.filterType === "type" && state.SearchType !== ""
-        ? (el) => el.type.includes(state.SearchType)
-        : (el) => el
-    )
-    .map((el) => (
-      <DashboardProductTable
-        colorreference={
-          state.filterReference === "reference" ? "red" : "black"
-        }
-        colorname={state.filterName === "name" ? "yellow" : "white"}
-        colormarque={state.filterMarque === "marque" ? "red" : "black"}
-        colorquantity={state.filterQuantity==="quantity"?"red":"black"}
-        colorcarton={state.filterCarton==="carton"?"red":"black"}
-        colorphase={state.filterPhase==="phase"?"red":"black"}
-        colortype={state.filterType==="type"?"red":"black"}
-        data={el}
-        
-      />
-    ))
-    .reverse()
-  }
+          {
+            getProductState
+              .filter(
+                state.filterName === "name" && state.SearchName !== ""
+                  ? (el) => el.name.includes(state.SearchName)
+                  : (el) => el
+              )
+              .filter(
+                state.filterMarque === "marque" && state.SearchMarque !== ""
+                  ? (el) => el.marque.includes(state.SearchMarque)
+                  : (el) => el
+              )
+              .filter(
+                state.filterReference === "reference" &&
+                  state.SearchReference !== ""
+                  ? (el) => el.reference === state.SearchReference
+                  : (el) => el
+              )
+              .filter(
+                state.filterQuantity === "quantity" && state.SearchQuantity !== ""
+                  ? (el) => el.quantity === state.SearchQuantity
+                  : (el) => el
+              )
+              .filter(
+                state.filterCarton === "carton" && state.SearchCarton !== ""
+                  ? (el) => el.carton === state.SearchCarton
+                  : (el) => el
+              ).filter(
+                state.filterPhase === "phase" && state.SearchPhase !== ""
+                  ? (el) => el.phase === state.SearchPhase
+                  : (el) => el
+              ).filter(
+                state.filterColor === "color" && state.SearchColor !== ""
+                  ? (el) => el.color.includes(state.SearchColor)
+                  : (el) => el
+              ).filter(
+                state.filterType === "type" && state.SearchType !== ""
+                  ? (el) => el.type.includes(state.SearchType)
+                  : (el) => el
+              )
+              .map((el) => (
+                <DashboardProductTable
+                  colorreference={
+                    state.filterReference === "reference" ? "red" : "black"
+                  }
+                  colorname={state.filterName === "name" ? "yellow" : "white"}
+                  colormarque={state.filterMarque === "marque" ? "red" : "black"}
+                  colorquantity={state.filterQuantity === "quantity" ? "red" : "black"}
+                  colorcarton={state.filterCarton === "carton" ? "red" : "black"}
+                  colorphase={state.filterPhase === "phase" ? "red" : "black"}
+                  colortype={state.filterType === "type" ? "red" : "black"}
+                  data={el}
+
+                />
+              ))
+              .reverse()
+          }
 
 
         </table >
 
-  <center>
-    <tfoot class="">
-      <tr class="">
-        <th colspan="12" class="">
-          <div class="ui pagination right floated menu">
-            <a class="icon item">
-              <i aria-hidden="true" class="chevron left icon"></i>
-            </a>
-            <a class="item">1</a>
-            <a class="item">2</a>
-            <a class="item">3</a>
-            <a class="item">4</a>
-            <a class="icon item">
-              <i aria-hidden="true" class="chevron right icon"></i>
-            </a>
-          </div>
-        </th>
-      </tr>
-    </tfoot>
-  </center>
+        <center>
+          <tfoot class="">
+            <tr class="">
+              <th colspan="12" class="">
+                <div class="ui pagination right floated menu">
+                  <a class="icon item">
+                    <i aria-hidden="true" class="chevron left icon"></i>
+                  </a>
+                  <a class="item">1</a>
+                  <a class="item">2</a>
+                  <a class="item">3</a>
+                  <a class="item">4</a>
+                  <a class="icon item">
+                    <i aria-hidden="true" class="chevron right icon"></i>
+                  </a>
+                </div>
+              </th>
+            </tr>
+          </tfoot>
+        </center>
       </div >
     </div >
   );

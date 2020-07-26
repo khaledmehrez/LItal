@@ -17,8 +17,8 @@ const DashboardProductTable = (props) => {
     dispatch(getUserDataApi());
   }, [dispatch]);
   //role of user
-  const tokenFromLocalStorage=localStorage.getItem("token")
-  const decodedToken=jwt_decode(tokenFromLocalStorage)
+  const tokenFromLocalStorage = localStorage.getItem("token")
+  const decodedToken = jwt_decode(tokenFromLocalStorage)
   const name = decodedToken.data.firstName;
   const role = decodedToken.data.role;
   console.log(name)
@@ -56,7 +56,7 @@ const DashboardProductTable = (props) => {
     console.log(objHistory);
     dispatch(PostHistoryFromApi(objHistory));
   }
-console.log(data.image)
+  console.log(data.image)
   return (
 
     <tbody class="">
@@ -68,23 +68,23 @@ console.log(data.image)
 
           < Modal trigger={< button className="ui blue basic button  btn-trash " ><i aria-hidden="true" class="edit icon"></i></ button>} closeIcon >
             <Modal.Content >
-            <center >
-              <h3>Editer Article </h3>
-              <br />
-              
-                <input className=' input-form-css ' type="text" value={state.name} name="name" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.reference} name="reference" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.color} name="color" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.quantity} name="quantity" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.phase} name="phase" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.dimension} name="dimension" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.marque} name="marque" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.type} name="type" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.collection} name="collection" onChange={handleChange} /><br/>
-                <input className='input-form-css' type="text" value={state.locallisation} name="locallisation" onChange={handleChange} /><br/>
-                <input  className='input-form-css'type="text" value={state.carton} name="carton" onChange={handleChange} /><br/>
-                <input  className='input-form-css'type="text" value={state.image} name="image" onChange={handleChange} /><br/>
-                <input  className='input-form-css' type="text" value={state.commentaire} name="commentaire" onChange={handleChange} /><br/>
+              <center >
+                <h3>Editer Article </h3>
+                <br />
+
+                <input className=' input-form-css ' type="text" value={state.name} name="name" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.reference} name="reference" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.color} name="color" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.quantity} name="quantity" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.phase} name="phase" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.dimension} name="dimension" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.marque} name="marque" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.type} name="type" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.collection} name="collection" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.locallisation} name="locallisation" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.carton} name="carton" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.image} name="image" onChange={handleChange} /><br />
+                <input className='input-form-css' type="text" value={state.commentaire} name="commentaire" onChange={handleChange} /><br />
                 <button type="submit" name="edit Product" value={data._id} onClick={editProduct
                 } class="ui positive button"
                 >
@@ -122,7 +122,7 @@ console.log(data.image)
         <td>{data.locallisation}</td>
         <td style={{ color: props.colorcarton }}>{data.carton}</td>
 
-        <td><img src={"ff"}/></td>
+        <td><img className='box-table-image' src={"http://localhost:5000/" + data.image} /></td>
 
         <td>{data.commentaire}</td>
 

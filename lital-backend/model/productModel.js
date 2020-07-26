@@ -4,9 +4,9 @@ const ProductSchema=mongoose.Schema(
     {
         name:{type:String,},
         color:{type:String},
-        reference:{type:String},
+        ref:{type:String},
   
-        quantitys:{type:Number} ,
+        quantitys:{type:String} ,
         phase:{type:String},
         dimension:{type:String},
         marque:{type:String} ,
