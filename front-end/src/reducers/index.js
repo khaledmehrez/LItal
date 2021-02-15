@@ -54,6 +54,7 @@ function usersReducer(state = tabUsers, action) {
 
 
 //get user session
+if(localStorage.getItem('token')===null){localStorage.setItem("token","")}
 const tokenFromLocalStorage=localStorage.getItem("token")
 
 const statSession=(tokenFromLocalStorage==="")?"guest":jwt_decode(tokenFromLocalStorage).data.role
